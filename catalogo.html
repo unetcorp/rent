@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo Auto - AutoRent</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="catalogo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>AutoRent</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalogo.html" class="active">Catalogo Auto</a></li>
+                    <li><a href="offerte.html">Offerte</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="login.html" class="btn btn-outline">Accedi</a>
+                <a href="registrazione.html" class="btn btn-primary">Registrati</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Catalogo Auto</h1>
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a> / <span>Catalogo Auto</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="search-filters">
+        <div class="container">
+            <div class="search-box">
+                <form id="search-form">
+                    <div class="form-group">
+                        <label for="location">Località di ritiro</label>
+                        <select id="location">
+                            <option value="">Seleziona località</option>
+                            <option value="roma">Roma</option>
+                            <option value="milano">Milano</option>
+                            <option value="napoli">Napoli</option>
+                            <option value="torino">Torino</option>
+                            <option value="firenze">Firenze</option>
+                            <option value="bologna">Bologna</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="pickup-date">Data di ritiro</label>
+                        <input type="date" id="pickup-date">
+                    </div>
+                    <div class="form-group">
+                        <label for="return-date">Data di consegna</label>
+                        <input type="date" id="return-date">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Cerca Auto</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="catalog-content">
+        <div class="container">
+            <div class="catalog-layout">
+                <aside class="filters-sidebar">
+                    <div class="filter-group">
+                        <h3>Filtri</h3>
+                        <button id="reset-filters" class="btn btn-outline btn-sm">Resetta filtri</button>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h4>Prezzo giornaliero</h4>
+                        <div class="price-slider">
+                            <div class="price-range">
+                                <span id="min-price">€0</span>
+                                <span id="max-price">€200</span>
+                            </div>
+                            <input type="range" id="price-filter" min="0" max="200" step="5" value="200">
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h4>Tipo di veicolo</h4>
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" name="vehicle-type" value="economy"> Economy
+                            </label>
+                            <label>
+                                <input type="checkbox" name="vehicle-type" value="compact"> Compact
+                            </label>
+                            <label>
+                                <input type="checkbox" name="vehicle-type" value="sedan"> Sedan
+                            </label>
+                            <label>
+                                <input type="checkbox" name="vehicle-type" value="suv"> SUV
+                            </label>
+                            <label>
+                                <input type="checkbox" name="vehicle-type" value="luxury"> Luxury
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h4>Marche</h4>
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" name="brand" value="fiat"> Fiat
+                            </label>
+                            <label>
+                                <input type="checkbox" name="brand" value="volkswagen"> Volkswagen
+                            </label>
+                            <label>
+                                <input type="checkbox" name="brand" value="audi"> Audi
+                            </label>
+                            <label>
+                                <input type="checkbox" name="brand" value="mercedes"> Mercedes
+                            </label>
+                            <label>
+                                <input type="checkbox" name="brand" value="bmw"> BMW
+                            </label>
+                            <label>
+                                <input type="checkbox" name="brand" value="toyota"> Toyota
+                            </label>
+                            <label>
+                                <input type="checkbox" name="brand" value="renault"> Renault
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h4>Carburante</h4>
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" name="fuel" value="petrol"> Benzina
+                            </label>
+                            <label>
+                                <input type="checkbox" name="fuel" value="diesel"> Diesel
+                            </label>
+                            <label>
+                                <input type="checkbox" name="fuel" value="hybrid"> Ibrida
+                            </label>
+                            <label>
+                                <input type="checkbox" name="fuel" value="electric"> Elettrica
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h4>Trasmissione</h4>
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" name="transmission" value="manual"> Manuale
+                            </label>
+                            <label>
+                                <input type="checkbox" name="transmission" value="automatic"> Automatica
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h4>Caratteristiche</h4>
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" name="features" value="ac"> Aria condizionata
+                            </label>
+                            <label>
+                                <input type="checkbox" name="features" value="gps"> GPS/Navigatore
+                            </label>
+                            <label>
+                                <input type="checkbox" name="features" value="bluetooth"> Bluetooth
+                            </label>
+                            <label>
+                                <input type="checkbox" name="features" value="usb"> Porte USB
+                            </label>
+                            <label>
+                                <input type="checkbox" name="features" value="child-seat"> Seggiolino bambini
+                            </label>
+                        </div>
+                    </div>
+                </aside>
+                
+                <div class="catalog-main">
+                    <div class="catalog-header">
+                        <div class="results-count">
+                            <span id="results-number">12</span> auto trovate
+                        </div>
+                        <div class="sort-options">
+                            <label for="sort-by">Ordina per:</label>
+                            <select id="sort-by">
+                                <option value="price-asc">Prezzo: dal più basso</option>
+                                <option value="price-desc">Prezzo: dal più alto</option>
+                                <option value="name-asc">Nome: A-Z</option>
+                                <option value="name-desc">Nome: Z-A</option>
+                                <option value="popularity">Popolarità</option>
+                            </select>
+                        </div>
+                        <div class="view-options">
+                            <button id="grid-view" class="view-btn active"><i class="fas fa-th"></i></button>
+                            <button id="list-view" class="view-btn"><i class="fas fa-list"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="cars-grid" id="cars-container">
+                        <!-- Auto 1 -->
+                        <div class="car-card" data-price="35" data-brand="fiat" data-type="economy" data-fuel="petrol" data-transmission="manual">
+                            <div class="car-image">
+                                <img src="images/car1.jpg" alt="Fiat 500">
+                                <span class="tag">Popolare</span>
+                            </div>
+                            <div class="car-details">
+                                <h3>Fiat 500</h3>
+                                <div class="car-features">
+                                    <span><i class="fas fa-user"></i> 4 posti</span>
+                                    <span><i class="fas fa-suitcase"></i> 2 valigie</span>
+                                    <span><i class="fas fa-gas-pump"></i> Benzina</span>
+                                </div>
+                                <div class="car-specs">
+                                    <span><i class="fas fa-cog"></i> Manuale</span>
+                                    <span><i class="fas fa-snowflake"></i> A/C</span>
+                                </div>
+                                <div class="car-price">
+                                    <span class="price">€35</span> / giorno
+                                </div>
+                                <a href="dettaglio-auto.html?id=1" class="btn btn-primary">Prenota Ora</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Auto 2 -->
+                        <div class="car-card" data-price="45" data-brand="volkswagen" data-type="compact" data-fuel="diesel" data-transmission="manual">
+                            <div class="car-image">
+                                <img src="images/car2.jpg" alt="Volkswagen Golf">
+                                <span class="tag">Consigliata</span>
+                            </div>
+                            <div class="car-details">
+                                <h3>Volkswagen Golf</h3>
+                                <div class="car-features">
+                                    <span><i class="fas fa-user"></i> 5 posti</span>
+                                    <span><i class="fas fa-suitcase"></i> 3 valigie</span>
+                                    <span><i class="fas fa-gas-pump"></i> Diesel</span>
+                                </div>
+                                <div class="car-specs">
+                                    <span><i class="fas fa-cog"></i> Manuale</span>
+                                    <span><i class="fas fa-snowflake"></i> A/C</span>
+                                </div>
+                                <div class="car-price">
+                                    <span class="price">€45</span> / giorno
+                                </div>
+                                <a href="dettaglio-auto.html?id=2" class="btn btn-primary">Prenota Ora</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Auto 3 -->
+                        <div class="car-card" data-price="60" data-brand="audi" data-type="sedan" data-fuel="diesel" data-transmission="automatic">
+                            <div class="car-image">
+                                <img src="images/car3.jpg" alt="Audi A3">
+                            </div>
+                            <div class="car-details">
+                                <h3>Audi A3</h3>
+                                <div class="car-features">
+                                    <span><i class="fas fa-user"></i> 5 posti</span>
+                                    <span><i class="fas fa-suitcase"></i> 3 valigie</span>
+                                    <span><i class="fas fa-gas-pump"></i> Diesel</span>
+                                </div>
+                                <div class="car-specs">
+                                    <span><i class="fas fa-cog"></i> Automatica</span>
+                                    <span><i class="fas fa-snowflake"></i> A/C</span>
+                                </div>
+                                <div class="car-price">
+                                    <span class="price">€60</span> / giorno
+                                </div>
+                                <a href="dettaglio-auto.html?id=3" class="btn btn-primary">Prenota Ora</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Auto 4 -->
+                        <div class="car-card" data-price="80" data-brand="mercedes" data-type="sedan" data-fuel="diesel" data-transmission="automatic">
+                            <div class="car-image">
+                                <img src="images/car4.jpg" alt="Mercedes Classe C">
+                                <span class="tag">Premium</span>
+                            </div>
+                            <div class="car-details">
+                                <h3>Mercedes Classe C</h3>
+                                <div class="car-features">
+                                    <span><i class="fas fa-user"></i> 5 posti</span>
+                                    <span><i class="fas fa-suitcase"></i> 4 valigie</span>
+                                    <span><i class="fas fa-gas-pump"></i> Diesel</span>
+                                </div>
+                                <div class="car-specs">
+                                    <span><i class="fas fa-cog"></i> Automatica</span>
+                                    <span><i class="fas fa-snowflake"></i> A/C</span>
+                                </div>
+                                <div class="car-price">
+                                    <span class="price">€80</span> / giorno
+                                </div>
+                                <a href="dettaglio-auto.html?id=4" class="btn btn-primary">Prenota Ora</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Auto 5 -->
+                        <div class="car-card" data-price="55" data-brand="toyota" data-type="compact" data-fuel="hybrid" data-transmission="automatic">
+                            <div class="car-image">
+                                <img src="images/car5.jpg" alt="Toyota Corolla Hybrid">
+                                <span class="tag">Eco</span>
+                            </div>
+                            <div class="car-details">
+                                <h3>Toyota Corolla Hybrid</h3>
+                                <div class="car-features">
+                                    <span><i class="fas fa-user"></i> 5 posti</span>
+                                    <span><i class="fas fa-suitcase"></i> 3 valigie</span>
+                                    <span><i class="fas fa-gas-pump"></i> Ibrida</span>
+                                </div>
+                                <div class="car-specs">
+                                    <span><i class="fas fa-cog"></i> Automatica</span>
+                                    <span><i class="fas fa-snowflake"></i> A/C</span>
+                                </div>
+                                <div class="car-price">
+                                    <span class="price">€55</span> / giorno
+                                </div>
+                                <a href="dettaglio-auto.html?id=5" class="btn btn-primary">Prenota Ora</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Auto 6 -->
+                        <div class="car-card" data-price="120" data-brand="bmw" data-type="luxury" data-fuel="petrol" data-transmission="automatic">
+                            <div class="car-image">
+                                <img src="images/car6.jpg" alt="BMW Serie 5">
+                                <span class="tag">Premium</span>
+                            </div>
+                            <div class="car-details">
+                                <h3>BMW Serie 5</h3>
+                                <div class="car-features">
+                                    <span><i class="fas fa-user"></i> 5 posti</span>
+                                    <span><i class="fas fa-suitcase"></i> 4 valigie</span>
+                                    <span><i class="fas fa-gas-pump"></i> Benzina</span>
+                                </div>
+                                <div class="car-specs">
+                                    <span><i class="fas fa-cog"></i> Automatica</span>
+                                    <span><i class="fas fa-snowflake"></i> A/C</span>
+                                </div>
+                                <div class="car-price">
+                                    <span class="price">€120</span> / giorno
+                                </div>
+                                <a href="dettaglio-auto.html?id=6" class="btn btn-primary">Prenota Ora</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Auto 7 -->
+                        <div class="car-card" data-price="40" data-brand="renault" data-type="economy" data-fuel="petrol" data-transmission="manual">
+                            <div class="car-image">
+                                <img src="images/car7.jpg" alt="Renault Clio">
+                            </div>
+                            <div class="car-details">
+                                <h3>Renault Clio</h3>
+                                <div class="car-features">
+                                    <span><i class="fas fa-user"></i> 5 posti</span>
+                                    <span><i class="fas fa-suitcase"></i> 2 valigie</span>
+                                    <span><i class="fas fa-gas-pump"></i> Benzina</span>
+                                </div>
+                                <div class="car-specs">
+                                    <span><i class="fas fa-cog"></i> Manuale</span>
+                                    <span><i class="fas fa-snowflake"></i> A/C</span>
+                                </div>
+                                <div class="car-price">
+                                    <span class="price">€40</span> / giorno
+                                </div>
+                                <a href="dettaglio-auto.html?id=7" class="btn btn-primary">Prenota Ora</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Auto 8 -->
+                        <div class="car-card" data-price="90" data-brand="audi" data-type="suv" data-fuel="diesel" data-transmission="automatic">
+                            <div class="car-image">
+                                <img src="images/car8.jpg" alt="Audi Q5">
+                            </div>
+                            <div class="car-details">
+                                <h3>Audi Q5</h3>
+                                <div class="car-features">
+                                    <span><i class="fas fa-user"></i> 5 posti</span>
+                                    <span><i class="fas fa-suitcase"></i> 5 valigie</span>
+                                    <span><i class="fas fa-gas-pump"></i> Diesel</span>
+                                </div>
+                                <div class="car-specs">
+                                    <span><i class="fas fa-cog"></i> Automatica</span>
+                                    <span><i class="fas fa-snowflake"></i> A/C</span>
+                                </div>
+                                <div class="car-price">
+                                    <span class="price">€90</span> / giorno
+                                </div>
+                                <a href="dettaglio-auto.html?id=8" class="btn btn-primary">Prenota Ora</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Auto 9 -->
+                        <div class="car-card" data-price="65" data-brand="volkswagen" data-type="suv" data-fuel="diesel" data-transmission="automatic">
+                            <div class="car-image">
+                                <img src="images/car9.jpg" alt="Volkswagen Tiguan">
+                            </div>
+                            <div class="car-details">
+                                <h3>Volkswagen Tiguan</h3>
+                                <div class="car-features">
+                                    <span><i class="fas fa-user"></i> 5 posti</span>
+                                    <span><i class="fas fa-suitcase"></i> 4 valigie</span>
+                                    <span><i class="fas fa-gas-pump"></i> Diesel</span>
+                                </div>
+                                <div class="car-specs">
+                                    <span><i class="fas fa-cog"></i> Automatica</span>
+                                    <span><i class="fas fa-snowflake"></i> A/C</span>
+                                </div>
+                                <div class="car-price">
+                                    <span class="price">€65</span> / giorno
+                                </div>
+                                <a href="dettaglio-auto.html?id=9" class="btn btn-primary">Prenota Ora</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Auto 10 -->
+                        <div class="car-card" data-price="150" data-brand="mercedes" data-type="luxury" data-fuel="petrol" data-transmission="automatic">
+                            <div class="car-image">
+                                <img src="images/car10.jpg" alt="Mercedes Classe E Cabrio">
+                                <span class="tag">Premium</span>
+                            </div>
+                            <div class="car-details">
+                                <h3>Mercedes Classe E Cabrio</h3>
+                                <div class="car-features">
+                                    <span><i class="fas fa-user"></i> 4 posti</span>
+                                    <span><i class="fas fa-suitcase"></i> 2 valigie</span>
+                                    <span><i class="fas fa-gas-pump"></i> Benzina</span>
+                                </div>
+                                <div class="car-specs">
+                                    <span><i class="fas fa-cog"></i> Automatica</span>
+                                    <span><i class="fas fa-snowflake"></i> A/C</span>
+                                </div>
+                                <div class="car-price">
+                                    <span class="price">€150</span> / giorno
+                                </div>
+                                <a href="dettaglio-auto.html?id=10" class="btn btn-primary">Prenota Ora</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Auto 11 -->
+                        <div class="car-card" data-price="70" data-brand="toyota" data-type="suv" data-fuel="hybrid" data-transmission="automatic">
+                            <div class="car-image">
+                                <img src="images/car11.jpg" alt="Toyota RAV4 Hybrid">
+                                <span class="tag">Eco</span>
+                            </div>
+                            <div class="car-details">
+                                <h3>Toyota RAV4 Hybrid</h3>
+                                <div class="car-features">
+                                    <span><i class="fas fa-user"></i> 5 posti</span>
+                                    <span><i class="fas fa-suitcase"></i> 4 valigie</span>
+                                    <span><i class="fas fa-gas-pump"></i> Ibrida</span>
+                                </div>
+                                <div class="car-specs">
+                                    <span><i class="fas fa-cog"></i> Automatica</span>
+                                    <span><i class="fas fa-snowflake"></i> A/C</span>
+                                </div>
+                                <div class="car-price">
+                                    <span class="price">€70</span> / giorno
+                                </div>
+                                <a href="dettaglio-auto.html?id=11" class="btn btn-primary">Prenota Ora</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Auto 12 -->
+                        <div class="car-card" data-price="100" data-brand="bmw" data-type="sedan" data-fuel="diesel" data-transmission="automatic">
+                            <div class="car-image">
+                                <img src="images/car12.jpg" alt="BMW Serie 3">
+                            </div>
+                            <div class="car-details">
+                                <h3>BMW Serie 3</h3>
+                                <div class="car-features">
+                                    <span><i class="fas fa-user"></i> 5 posti</span>
+                                    <span><i class="fas fa-suitcase"></i> 4 valigie</span>
+                                    <span><i class="fas fa-gas-pump"></i> Diesel</span>
+                                </div>
+                                <div class="car-specs">
+                                    <span><i class="fas fa-cog"></i> Automatica</span>
+                                    <span><i class="fas fa-snowflake"></i> A/C</span>
+                                </div>
+                                <div class="car-price">
+                                    <span class="price">€100</span> / giorno
+                                </div>
+                                <a href="dettaglio-auto.html?id=12" class="btn btn-primary">Prenota Ora</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pagination">
+                        <a href="#" class="active">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#" class="next">Successiva <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AutoRent</h3>
+                    <p>Il miglior servizio di noleggio auto in Italia. Qualità, convenienza e assistenza garantita.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Link Utili</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="catalogo.html">Catalogo Auto</a></li>
+                        <li><a href="offerte.html">Offerte</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="termini.html">Termini e Condizioni</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contatti</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Via Roma 123, 00100 Roma</p>
+                    <p><i class="fas fa-phone"></i> +39 06 1234567</p>
+                    <p><i class="fas fa-envelope"></i> info@autorent.it</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Iscriviti per ricevere offerte esclusive</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="La tua email">
+                        <button type="submit" class="btn btn-primary">Iscriviti</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 AutoRent. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="catalogo.js"></script>
+</body>
+</html>

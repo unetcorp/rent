@@ -1,0 +1,330 @@
+/* Pagamento CSS */
+
+/* Payment Methods */
+.payment-methods {
+    margin-bottom: 30px;
+}
+
+.payment-method {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.payment-method:hover {
+    background-color: #f0f0f0;
+}
+
+.payment-method.active {
+    border-color: #4a6bff;
+    background-color: rgba(74, 107, 255, 0.05);
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.radio-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.radio-custom {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    margin-right: 15px;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+}
+
+.radio-label input:checked ~ .radio-custom {
+    background-color: #4a6bff;
+    border-color: #4a6bff;
+}
+
+.radio-custom:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.radio-label input:checked ~ .radio-custom:after {
+    display: block;
+}
+
+.radio-label .radio-custom:after {
+    top: 5px;
+    left: 5px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: white;
+}
+
+.method-info {
+    flex: 1;
+}
+
+.method-name {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.method-description {
+    font-size: 0.85rem;
+    color: #777;
+}
+
+.method-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.method-icons i {
+    font-size: 1.5rem;
+    color: #555;
+}
+
+.fab.fa-cc-visa {
+    color: #1a1f71;
+}
+
+.fab.fa-cc-mastercard {
+    color: #eb001b;
+}
+
+.fab.fa-cc-amex {
+    color: #006fcf;
+}
+
+.fab.fa-paypal {
+    color: #003087;
+}
+
+/* Payment Forms */
+.payment-form {
+    display: none;
+    margin-top: 30px;
+}
+
+.payment-form.active {
+    display: block;
+}
+
+/* Credit Card Form */
+.card-input-wrapper {
+    position: relative;
+}
+
+.card-type-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #777;
+}
+
+.cvc-input-wrapper {
+    position: relative;
+}
+
+.cvc-info {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #777;
+    cursor: help;
+}
+
+.cvc-info .tooltip {
+    visibility: hidden;
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 0.8rem;
+    pointer-events: none;
+}
+
+.cvc-info .tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+.cvc-info:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Payment Security */
+.payment-security {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 25px 0;
+}
+
+.security-icon {
+    font-size: 1.8rem;
+    color: #4a6bff;
+    margin-right: 15px;
+}
+
+.security-text p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* PayPal Form */
+.paypal-info {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.paypal-info p {
+    margin-bottom: 25px;
+    color: #666;
+}
+
+.btn-paypal {
+    background-color: #0070ba;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-paypal:hover {
+    background-color: #003087;
+}
+
+.btn-paypal i {
+    margin-right: 10px;
+}
+
+/* Bank Transfer Form */
+.bank-info {
+    padding: 20px 0;
+}
+
+.bank-info p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.bank-details {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.bank-detail-item {
+    display: flex;
+    margin-bottom: 12px;
+}
+
+.bank-detail-item:last-child {
+    margin-bottom: 0;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: #555;
+    width: 120px;
+    flex-shrink: 0;
+}
+
+.detail-value {
+    color: #333;
+}
+
+.bank-note {
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+.bank-note a {
+    color: #4a6bff;
+    text-decoration: none;
+}
+
+.bank-note a:hover {
+    text-decoration: underline;
+}
+
+/* Form Validation Styles */
+input.error {
+    border-color: #ff4a4a !important;
+}
+
+.field-error {
+    color: #ff4a4a;
+    font-size: 0.85rem;
+    margin-top: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .method-icons {
+        flex-wrap: wrap;
+    }
+    
+    .bank-detail-item {
+        flex-direction: column;
+    }
+    
+    .detail-label {
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .payment-security {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .security-icon {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}

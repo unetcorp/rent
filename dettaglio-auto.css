@@ -1,0 +1,620 @@
+/* Dettaglio Auto CSS */
+
+/* Page Header */
+.page-header {
+    background-color: #f5f7fa;
+    padding: 30px 0;
+    margin-bottom: 40px;
+}
+
+.page-header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.breadcrumbs {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.breadcrumbs a {
+    color: #4a6bff;
+    text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+/* Car Detail Layout */
+.car-detail-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+/* Car Gallery */
+.car-gallery {
+    position: relative;
+}
+
+.main-image {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.main-image:hover img {
+    transform: scale(1.05);
+}
+
+.thumbnail-gallery {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.thumbnail {
+    width: 100px;
+    height: 70px;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thumbnail:hover, .thumbnail.active {
+    opacity: 1;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.thumbnail.active {
+    border: 2px solid #4a6bff;
+}
+
+/* Car Info */
+.car-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.car-title h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.car-rating {
+    display: flex;
+    align-items: center;
+}
+
+.stars {
+    color: #ffc107;
+    margin-right: 10px;
+}
+
+.rating-count {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.car-price {
+    text-align: right;
+}
+
+.price-tag {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.price-tag .price {
+    font-size: 1.8rem;
+    color: #4a6bff;
+}
+
+.total-price {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Car Features List */
+.car-features-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+}
+
+.feature i {
+    font-size: 1.5rem;
+    color: #4a6bff;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(74, 107, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.feature-info h4 {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 3px;
+    font-weight: 500;
+}
+
+.feature-info p {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Car Description */
+.car-description {
+    margin-bottom: 30px;
+}
+
+.car-description h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.car-description p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Car Amenities */
+.car-amenities h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.amenities-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+.amenities-list li {
+    display: flex;
+    align-items: center;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.amenities-list li i {
+    color: #4a6bff;
+    margin-right: 8px;
+}
+
+/* Booking Section */
+.booking-section {
+    background-color: #f5f7fa;
+    padding: 60px 0;
+    margin-bottom: 60px;
+}
+
+.booking-form {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #4a6bff;
+    outline: none;
+}
+
+/* Extras */
+.extras,
+.insurance {
+    margin-bottom: 30px;
+}
+
+.extras h3,
+.insurance h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.extras-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.extra-item {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px;
+    transition: background-color 0.3s;
+}
+
+.extra-item:hover {
+    background-color: #f0f0f0;
+}
+
+.checkbox-label,
+.radio-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkbox-label input,
+.radio-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkbox-custom,
+.radio-custom {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    margin-right: 15px;
+    transition: all 0.2s ease;
+}
+
+.radio-custom {
+    border-radius: 50%;
+}
+
+.checkbox-label input:checked ~ .checkbox-custom,
+.radio-label input:checked ~ .radio-custom {
+    background-color: #4a6bff;
+    border-color: #4a6bff;
+}
+
+.checkbox-custom:after,
+.radio-custom:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-label input:checked ~ .checkbox-custom:after,
+.radio-label input:checked ~ .radio-custom:after {
+    display: block;
+}
+
+.checkbox-label .checkbox-custom:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.radio-label .radio-custom:after {
+    top: 5px;
+    left: 5px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: white;
+}
+
+.extra-info,
+.insurance-info {
+    flex: 1;
+}
+
+.extra-name,
+.insurance-name {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 3px;
+}
+
+.extra-price,
+.insurance-price {
+    font-size: 0.9rem;
+    color: #4a6bff;
+    font-weight: 500;
+}
+
+.insurance-description {
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 3px;
+}
+
+/* Insurance Options */
+.insurance-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.insurance-option {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px;
+    transition: background-color 0.3s;
+}
+
+.insurance-option:hover {
+    background-color: #f0f0f0;
+}
+
+/* Booking Summary */
+.booking-summary {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.booking-summary h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.summary-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    color: #555;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #ddd;
+}
+
+.summary-item.total {
+    font-weight: 700;
+    color: #333;
+    font-size: 1.1rem;
+    border-bottom: none;
+    padding-top: 10px;
+    margin-top: 5px;
+}
+
+.form-actions {
+    text-align: center;
+}
+
+.btn-large {
+    padding: 15px 40px;
+    font-size: 1.1rem;
+}
+
+/* Similar Cars Section */
+.similar-cars {
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+}
+
+.cars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.car-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.car-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.car-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.car-card:hover .car-image img {
+    transform: scale(1.05);
+}
+
+.tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #4a6bff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.car-details {
+    padding: 20px;
+}
+
+.car-details h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.car-features {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.car-features span {
+    display: flex;
+    align-items: center;
+}
+
+.car-features i {
+    margin-right: 5px;
+    color: #4a6bff;
+}
+
+.car-price {
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.car-price .price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #4a6bff;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .car-detail-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .amenities-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .cars-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .extras-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .cars-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .main-image {
+        height: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .booking-form {
+        padding: 20px;
+    }
+    
+    .amenities-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .car-features {
+        flex-direction: column;
+        gap: 5px;
+    }
+}

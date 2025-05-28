@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento - AutoRent</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="prenotazione.css">
+    <link rel="stylesheet" href="pagamento.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>AutoRent</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalogo.html">Catalogo Auto</a></li>
+                    <li><a href="offerte.html">Offerte</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="login.html" class="btn btn-outline">Accedi</a>
+                <a href="registrazione.html" class="btn btn-primary">Registrati</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Pagamento</h1>
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a> / <a href="catalogo.html">Catalogo Auto</a> / <a href="dettaglio-auto.html">Dettaglio Auto</a> / <a href="prenotazione.html">Prenotazione</a> / <span>Pagamento</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="booking-process">
+        <div class="container">
+            <div class="booking-steps">
+                <div class="step completed">
+                    <div class="step-number">1</div>
+                    <div class="step-label">Selezione Auto</div>
+                </div>
+                <div class="step completed">
+                    <div class="step-number">2</div>
+                    <div class="step-label">Dettagli Noleggio</div>
+                </div>
+                <div class="step completed">
+                    <div class="step-number">3</div>
+                    <div class="step-label">Dati Personali</div>
+                </div>
+                <div class="step active">
+                    <div class="step-number">4</div>
+                    <div class="step-label">Pagamento</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-label">Conferma</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="booking-content">
+        <div class="container">
+            <div class="booking-layout">
+                <div class="booking-form-container">
+                    <div class="form-section">
+                        <h2>Metodo di Pagamento</h2>
+                        
+                        <div class="payment-methods">
+                            <div class="payment-method active">
+                                <label class="radio-label">
+                                    <input type="radio" name="payment-method" value="credit-card" checked>
+                                    <span class="radio-custom"></span>
+                                    <div class="method-info">
+                                        <div class="method-name">Carta di Credito/Debito</div>
+                                        <div class="method-icons">
+                                            <i class="fab fa-cc-visa"></i>
+                                            <i class="fab fa-cc-mastercard"></i>
+                                            <i class="fab fa-cc-amex"></i>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="payment-method">
+                                <label class="radio-label">
+                                    <input type="radio" name="payment-method" value="paypal">
+                                    <span class="radio-custom"></span>
+                                    <div class="method-info">
+                                        <div class="method-name">PayPal</div>
+                                        <div class="method-icons">
+                                            <i class="fab fa-paypal"></i>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="payment-method">
+                                <label class="radio-label">
+                                    <input type="radio" name="payment-method" value="bank-transfer">
+                                    <span class="radio-custom"></span>
+                                    <div class="method-info">
+                                        <div class="method-name">Bonifico Bancario</div>
+                                        <div class="method-description">Il veicolo sarà disponibile dopo la conferma del pagamento</div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div id="credit-card-form" class="payment-form active">
+                            <form id="payment-form">
+                                <div class="form-group full-width">
+                                    <label for="card-number">Numero Carta *</label>
+                                    <div class="card-input-wrapper">
+                                        <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
+                                        <div class="card-type-icon">
+                                            <i class="fab fa-cc-visa"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="card-expiry">Data Scadenza *</label>
+                                        <input type="text" id="card-expiry" placeholder="MM/AA" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="card-cvc">CVC/CVV *</label>
+                                        <div class="cvc-input-wrapper">
+                                            <input type="text" id="card-cvc" placeholder="123" required>
+                                            <div class="cvc-info">
+                                                <i class="fas fa-question-circle"></i>
+                                                <div class="tooltip">Il codice di sicurezza a 3 cifre sul retro della carta</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group full-width">
+                                    <label for="card-holder">Intestatario Carta *</label>
+                                    <input type="text" id="card-holder" placeholder="Nome Cognome" required>
+                                </div>
+                                
+                                <div class="form-group checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="save-card">
+                                        <span class="checkbox-custom"></span>
+                                        <span class="checkbox-text">Salva questa carta per futuri noleggi</span>
+                                    </label>
+                                </div>
+                                
+                                <div class="payment-security">
+                                    <div class="security-icon">
+                                        <i class="fas fa-lock"></i>
+                                    </div>
+                                    <div class="security-text">
+                                        <p>I tuoi dati di pagamento sono protetti da crittografia SSL a 256 bit.</p>
+                                        <p>Non memorizziamo i dettagli completi della tua carta.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-actions">
+                                    <a href="prenotazione.html" class="btn btn-outline">Indietro</a>
+                                    <button type="submit" class="btn btn-primary">Completa Pagamento</button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <div id="paypal-form" class="payment-form">
+                            <div class="paypal-info">
+                                <p>Sarai reindirizzato al sito di PayPal per completare il pagamento in modo sicuro.</p>
+                                <div class="paypal-button">
+                                    <button type="button" class="btn btn-paypal">
+                                        <i class="fab fa-paypal"></i> Paga con PayPal
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div id="bank-transfer-form" class="payment-form">
+                            <div class="bank-info">
+                                <p>Utilizza i seguenti dati per effettuare il bonifico bancario:</p>
+                                <div class="bank-details">
+                                    <div class="bank-detail-item">
+                                        <span class="detail-label">Intestatario:</span>
+                                        <span class="detail-value">AutoRent S.r.l.</span>
+                                    </div>
+                                    <div class="bank-detail-item">
+                                        <span class="detail-label">IBAN:</span>
+                                        <span class="detail-value">IT12A0123456789000000123456</span>
+                                    </div>
+                                    <div class="bank-detail-item">
+                                        <span class="detail-label">Banca:</span>
+                                        <span class="detail-value">Banca Esempio</span>
+                                    </div>
+                                    <div class="bank-detail-item">
+                                        <span class="detail-label">Causale:</span>
+                                        <span class="detail-value">Noleggio Auto - [Numero Prenotazione]</span>
+                                    </div>
+                                </div>
+                                <p class="bank-note">Importante: La prenotazione sarà confermata solo dopo la verifica del pagamento. Ti preghiamo di inviare la ricevuta del bonifico a <a href="mailto:pagamenti@autorent.it">pagamenti@autorent.it</a></p>
+                                <div class="form-actions">
+                                    <a href="prenotazione.html" class="btn btn-outline">Indietro</a>
+                                    <button type="button" class="btn btn-primary" id="confirm-bank-transfer">Conferma Prenotazione</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="booking-summary-container">
+                    <div class="booking-summary-card">
+                        <h3>Riepilogo Prenotazione</h3>
+                        
+                        <div class="car-summary">
+                            <div class="car-image">
+                                <img src="images/car4.jpg" alt="Mercedes Classe C">
+                            </div>
+                            <div class="car-info">
+                                <h4>Mercedes Classe C</h4>
+                                <div class="car-features">
+                                    <span><i class="fas fa-user"></i> 5 posti</span>
+                                    <span><i class="fas fa-suitcase"></i> 4 valigie</span>
+                                    <span><i class="fas fa-gas-pump"></i> Diesel</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="rental-details">
+                            <div class="detail-item">
+                                <div class="detail-label"><i class="fas fa-map-marker-alt"></i> Ritiro:</div>
+                                <div class="detail-value">Roma, 15 Giu 2023, 10:00</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label"><i class="fas fa-map-marker-alt"></i> Consegna:</div>
+                                <div class="detail-value">Roma, 22 Giu 2023, 10:00</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label"><i class="fas fa-calendar-alt"></i> Durata:</div>
+                                <div class="detail-value">7 giorni</div>
+                            </div>
+                        </div>
+                        
+                        <div class="price-breakdown">
+                            <h4>Dettaglio Costi</h4>
+                            <div class="price-item">
+                                <span>Noleggio auto (7 giorni)</span>
+                                <span>€560.00</span>
+                            </div>
+                            <div class="price-item">
+                                <span>GPS</span>
+                                <span>€35.00</span>
+                            </div>
+                            <div class="price-item">
+                                <span>Wi-Fi portatile</span>
+                                <span>€56.00</span>
+                            </div>
+                            <div class="price-item">
+                                <span>Assicurazione Media</span>
+                                <span>€105.00</span>
+                            </div>
+                            <div class="price-item total">
+                                <span>Totale</span>
+                                <span>€756.00</span>
+                            </div>
+                        </div>
+                        
+                        <div class="booking-help">
+                            <h4>Hai bisogno di aiuto?</h4>
+                            <p>Il nostro team di assistenza clienti è disponibile 24/7 per rispondere alle tue domande.</p>
+                            <div class="help-contacts">
+                                <div class="help-contact">
+                                    <i class="fas fa-phone"></i>
+                                    <span>+39 06 1234567</span>
+                                </div>
+                                <div class="help-contact">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>supporto@autorent.it</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AutoRent</h3>
+                    <p>Il miglior servizio di noleggio auto in Italia. Qualità, convenienza e assistenza garantita.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Link Utili</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="catalogo.html">Catalogo Auto</a></li>
+                        <li><a href="offerte.html">Offerte</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="termini.html">Termini e Condizioni</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contatti</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Via Roma 123, 00100 Roma</p>
+                    <p><i class="fas fa-phone"></i> +39 06 1234567</p>
+                    <p><i class="fas fa-envelope"></i> info@autorent.it</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Iscriviti per ricevere offerte esclusive</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="La tua email">
+                        <button type="submit" class="btn btn-primary">Iscriviti</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 AutoRent. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="pagamento.js"></script>
+</body>
+</html>

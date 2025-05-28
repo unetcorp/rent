@@ -1,0 +1,393 @@
+/* Stili per la pagina di conferma prenotazione */
+
+/* Sezione di conferma */
+.confirmation-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.confirmation-content {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Header della conferma */
+.confirmation-header {
+    text-align: center;
+    padding: 40px 30px;
+    background: linear-gradient(135deg, #4a90e2, #2c5aa0);
+    color: #fff;
+}
+
+.confirmation-icon {
+    margin-bottom: 20px;
+}
+
+.confirmation-icon i {
+    font-size: 80px;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+.confirmation-header h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.confirmation-header p {
+    font-size: 16px;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Numero di prenotazione */
+.confirmation-number {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f5ff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.confirmation-number h3 {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.booking-number {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2c5aa0;
+    letter-spacing: 1px;
+}
+
+/* Dettagli della conferma */
+.confirmation-details {
+    padding: 30px;
+}
+
+.confirmation-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.confirmation-info h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+/* Dettagli auto */
+.car-info-card {
+    display: flex;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.car-image {
+    width: 150px;
+    flex-shrink: 0;
+    background-color: #eee;
+}
+
+.car-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.car-info {
+    padding: 15px;
+    flex-grow: 1;
+}
+
+.car-info h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.car-specs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.car-specs span {
+    font-size: 14px;
+    color: #666;
+    display: flex;
+    align-items: center;
+}
+
+.car-specs i {
+    margin-right: 5px;
+    color: #4a90e2;
+}
+
+/* Dettagli noleggio */
+.rental-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.rental-info-item {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.rental-info-item.full-width {
+    grid-column: span 2;
+}
+
+.rental-info-item .label {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.rental-info-item .value {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.rental-info-item .date {
+    font-size: 14px;
+    color: #4a90e2;
+    margin-top: 5px;
+}
+
+/* Dettagli pagamento */
+.payment-info {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.payment-method {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.payment-method .label {
+    font-size: 14px;
+    color: #666;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.payment-method .value {
+    font-size: 16px;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.payment-method i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #4a90e2;
+}
+
+.payment-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.payment-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    color: #555;
+}
+
+.payment-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 2px solid #e0e0e0;
+}
+
+/* Prossimi passi */
+.next-steps {
+    padding: 30px;
+    background-color: #f0f5ff;
+    border-top: 1px solid #e0e0e0;
+}
+
+.next-steps h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.step-item {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.step-item:hover {
+    transform: translateY(-5px);
+}
+
+.step-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #4a90e2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+}
+
+.step-icon i {
+    font-size: 24px;
+    color: #fff;
+}
+
+.step-item h4 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.step-item p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Azioni di conferma */
+.confirmation-actions {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    border-top: 1px solid #e0e0e0;
+}
+
+.confirmation-actions .btn {
+    min-width: 180px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .confirmation-section {
+        padding: 30px 15px;
+    }
+    
+    .confirmation-header {
+        padding: 30px 20px;
+    }
+    
+    .confirmation-icon i {
+        font-size: 60px;
+        width: 100px;
+        height: 100px;
+    }
+    
+    .confirmation-header h1 {
+        font-size: 26px;
+    }
+    
+    .confirmation-details {
+        padding: 20px;
+    }
+    
+    .rental-info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .rental-info-item.full-width {
+        grid-column: span 1;
+    }
+    
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .car-info-card {
+        flex-direction: column;
+    }
+    
+    .car-image {
+        width: 100%;
+        height: 150px;
+    }
+    
+    .confirmation-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .confirmation-actions .btn {
+        width: 100%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .step-item:last-child {
+        grid-column: span 2;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}

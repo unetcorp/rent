@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dettaglio Auto - AutoRent</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dettaglio-auto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>AutoRent</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalogo.html" class="active">Catalogo Auto</a></li>
+                    <li><a href="offerte.html">Offerte</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="login.html" class="btn btn-outline">Accedi</a>
+                <a href="registrazione.html" class="btn btn-primary">Registrati</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1 id="car-title">Mercedes Classe C</h1>
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a> / <a href="catalogo.html">Catalogo Auto</a> / <span id="car-breadcrumb">Mercedes Classe C</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="car-detail">
+        <div class="container">
+            <div class="car-detail-layout">
+                <div class="car-gallery">
+                    <div class="main-image">
+                        <img id="main-car-image" src="images/car4.jpg" alt="Mercedes Classe C">
+                    </div>
+                    <div class="thumbnail-gallery">
+                        <div class="thumbnail active" data-image="images/car4.jpg">
+                            <img src="images/car4.jpg" alt="Mercedes Classe C - Vista frontale">
+                        </div>
+                        <div class="thumbnail" data-image="images/car4-interior.jpg">
+                            <img src="images/car4-interior.jpg" alt="Mercedes Classe C - Interni">
+                        </div>
+                        <div class="thumbnail" data-image="images/car4-rear.jpg">
+                            <img src="images/car4-rear.jpg" alt="Mercedes Classe C - Vista posteriore">
+                        </div>
+                        <div class="thumbnail" data-image="images/car4-side.jpg">
+                            <img src="images/car4-side.jpg" alt="Mercedes Classe C - Vista laterale">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="car-info">
+                    <div class="car-header">
+                        <div class="car-title">
+                            <h2>Mercedes Classe C</h2>
+                            <div class="car-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="rating-count">(32 recensioni)</span>
+                            </div>
+                        </div>
+                        <div class="car-price">
+                            <div class="price-tag">
+                                <span class="price">€80</span> / giorno
+                            </div>
+                            <div class="total-price">
+                                €560 per 7 giorni
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="car-features-list">
+                        <div class="feature">
+                            <i class="fas fa-car"></i>
+                            <div class="feature-info">
+                                <h4>Marca e Modello</h4>
+                                <p>Mercedes-Benz Classe C</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-calendar-alt"></i>
+                            <div class="feature-info">
+                                <h4>Anno</h4>
+                                <p>2022</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-user"></i>
+                            <div class="feature-info">
+                                <h4>Posti</h4>
+                                <p>5 persone</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-suitcase"></i>
+                            <div class="feature-info">
+                                <h4>Bagagli</h4>
+                                <p>4 valigie</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-gas-pump"></i>
+                            <div class="feature-info">
+                                <h4>Carburante</h4>
+                                <p>Diesel</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-cog"></i>
+                            <div class="feature-info">
+                                <h4>Trasmissione</h4>
+                                <p>Automatica</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <div class="feature-info">
+                                <h4>Consumo</h4>
+                                <p>5.2 L/100km</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-snowflake"></i>
+                            <div class="feature-info">
+                                <h4>Aria Condizionata</h4>
+                                <p>Sì</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="car-description">
+                        <h3>Descrizione</h3>
+                        <p>La Mercedes Classe C è una berlina di lusso che combina eleganza, comfort e prestazioni. Con interni raffinati e tecnologie all'avanguardia, offre un'esperienza di guida superiore sia in città che nei lunghi viaggi.</p>
+                        <p>Questa versione è equipaggiata con un motore diesel efficiente, cambio automatico a 9 rapporti e numerosi sistemi di assistenza alla guida per garantire sicurezza e comfort in ogni situazione.</p>
+                    </div>
+                    
+                    <div class="car-amenities">
+                        <h3>Dotazioni</h3>
+                        <ul class="amenities-list">
+                            <li><i class="fas fa-check"></i> Navigatore GPS</li>
+                            <li><i class="fas fa-check"></i> Bluetooth</li>
+                            <li><i class="fas fa-check"></i> Sensori di parcheggio</li>
+                            <li><i class="fas fa-check"></i> Telecamera posteriore</li>
+                            <li><i class="fas fa-check"></i> Cruise control adattivo</li>
+                            <li><i class="fas fa-check"></i> Sedili in pelle</li>
+                            <li><i class="fas fa-check"></i> Sedili riscaldati</li>
+                            <li><i class="fas fa-check"></i> Climatizzatore automatico</li>
+                            <li><i class="fas fa-check"></i> Sistema audio premium</li>
+                            <li><i class="fas fa-check"></i> Cerchi in lega</li>
+                            <li><i class="fas fa-check"></i> Fari LED</li>
+                            <li><i class="fas fa-check"></i> Porte USB</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-form">
+                <h2>Prenota Ora</h2>
+                <form id="booking-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="pickup-location">Località di ritiro</label>
+                            <select id="pickup-location" required>
+                                <option value="">Seleziona località</option>
+                                <option value="roma">Roma</option>
+                                <option value="milano">Milano</option>
+                                <option value="napoli">Napoli</option>
+                                <option value="torino">Torino</option>
+                                <option value="firenze">Firenze</option>
+                                <option value="bologna">Bologna</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="return-location">Località di consegna</label>
+                            <select id="return-location" required>
+                                <option value="">Seleziona località</option>
+                                <option value="roma">Roma</option>
+                                <option value="milano">Milano</option>
+                                <option value="napoli">Napoli</option>
+                                <option value="torino">Torino</option>
+                                <option value="firenze">Firenze</option>
+                                <option value="bologna">Bologna</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="pickup-date">Data di ritiro</label>
+                            <input type="date" id="pickup-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pickup-time">Ora di ritiro</label>
+                            <select id="pickup-time" required>
+                                <option value="">Seleziona ora</option>
+                                <option value="09:00">09:00</option>
+                                <option value="10:00">10:00</option>
+                                <option value="11:00">11:00</option>
+                                <option value="12:00">12:00</option>
+                                <option value="13:00">13:00</option>
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00</option>
+                                <option value="17:00">17:00</option>
+                                <option value="18:00">18:00</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="return-date">Data di consegna</label>
+                            <input type="date" id="return-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="return-time">Ora di consegna</label>
+                            <select id="return-time" required>
+                                <option value="">Seleziona ora</option>
+                                <option value="09:00">09:00</option>
+                                <option value="10:00">10:00</option>
+                                <option value="11:00">11:00</option>
+                                <option value="12:00">12:00</option>
+                                <option value="13:00">13:00</option>
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00</option>
+                                <option value="17:00">17:00</option>
+                                <option value="18:00">18:00</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="extras">
+                        <h3>Extra opzionali</h3>
+                        <div class="extras-list">
+                            <div class="extra-item">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="extra" value="gps">
+                                    <span class="checkbox-custom"></span>
+                                    <div class="extra-info">
+                                        <div class="extra-name">GPS</div>
+                                        <div class="extra-price">€5/giorno</div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="extra-item">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="extra" value="child-seat">
+                                    <span class="checkbox-custom"></span>
+                                    <div class="extra-info">
+                                        <div class="extra-name">Seggiolino bambini</div>
+                                        <div class="extra-price">€7/giorno</div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="extra-item">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="extra" value="additional-driver">
+                                    <span class="checkbox-custom"></span>
+                                    <div class="extra-info">
+                                        <div class="extra-name">Conducente aggiuntivo</div>
+                                        <div class="extra-price">€10/giorno</div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="extra-item">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="extra" value="wifi">
+                                    <span class="checkbox-custom"></span>
+                                    <div class="extra-info">
+                                        <div class="extra-name">Wi-Fi portatile</div>
+                                        <div class="extra-price">€8/giorno</div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="insurance">
+                        <h3>Assicurazione</h3>
+                        <div class="insurance-options">
+                            <div class="insurance-option">
+                                <label class="radio-label">
+                                    <input type="radio" name="insurance" value="basic" checked>
+                                    <span class="radio-custom"></span>
+                                    <div class="insurance-info">
+                                        <div class="insurance-name">Base</div>
+                                        <div class="insurance-description">Copertura di base con franchigia di €1000</div>
+                                        <div class="insurance-price">Inclusa</div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="insurance-option">
+                                <label class="radio-label">
+                                    <input type="radio" name="insurance" value="medium">
+                                    <span class="radio-custom"></span>
+                                    <div class="insurance-info">
+                                        <div class="insurance-name">Media</div>
+                                        <div class="insurance-description">Copertura estesa con franchigia di €500</div>
+                                        <div class="insurance-price">€15/giorno</div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="insurance-option">
+                                <label class="radio-label">
+                                    <input type="radio" name="insurance" value="full">
+                                    <span class="radio-custom"></span>
+                                    <div class="insurance-info">
+                                        <div class="insurance-name">Completa</div>
+                                        <div class="insurance-description">Copertura totale senza franchigia</div>
+                                        <div class="insurance-price">€25/giorno</div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="booking-summary">
+                        <h3>Riepilogo prenotazione</h3>
+                        <div class="summary-items">
+                            <div class="summary-item">
+                                <span>Noleggio auto (7 giorni)</span>
+                                <span>€560.00</span>
+                            </div>
+                            <div class="summary-item" id="extras-cost">
+                                <span>Extra</span>
+                                <span>€0.00</span>
+                            </div>
+                            <div class="summary-item" id="insurance-cost">
+                                <span>Assicurazione</span>
+                                <span>€0.00</span>
+                            </div>
+                            <div class="summary-item total">
+                                <span>Totale</span>
+                                <span id="total-cost">€560.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary btn-large">Prenota Ora</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="similar-cars">
+        <div class="container">
+            <h2 class="section-title">Auto Simili</h2>
+            <div class="cars-grid">
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="images/car6.jpg" alt="BMW Serie 5">
+                        <span class="tag">Premium</span>
+                    </div>
+                    <div class="car-details">
+                        <h3>BMW Serie 5</h3>
+                        <div class="car-features">
+                            <span><i class="fas fa-user"></i> 5 posti</span>
+                            <span><i class="fas fa-suitcase"></i> 4 valigie</span>
+                            <span><i class="fas fa-gas-pump"></i> Benzina</span>
+                        </div>
+                        <div class="car-price">
+                            <span class="price">€120</span> / giorno
+                        </div>
+                        <a href="dettaglio-auto.html?id=6" class="btn btn-primary">Prenota Ora</a>
+                    </div>
+                </div>
+                
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="images/car12.jpg" alt="BMW Serie 3">
+                    </div>
+                    <div class="car-details">
+                        <h3>BMW Serie 3</h3>
+                        <div class="car-features">
+                            <span><i class="fas fa-user"></i> 5 posti</span>
+                            <span><i class="fas fa-suitcase"></i> 4 valigie</span>
+                            <span><i class="fas fa-gas-pump"></i> Diesel</span>
+                        </div>
+                        <div class="car-price">
+                            <span class="price">€100</span> / giorno
+                        </div>
+                        <a href="dettaglio-auto.html?id=12" class="btn btn-primary">Prenota Ora</a>
+                    </div>
+                </div>
+                
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="images/car3.jpg" alt="Audi A3">
+                    </div>
+                    <div class="car-details">
+                        <h3>Audi A3</h3>
+                        <div class="car-features">
+                            <span><i class="fas fa-user"></i> 5 posti</span>
+                            <span><i class="fas fa-suitcase"></i> 3 valigie</span>
+                            <span><i class="fas fa-gas-pump"></i> Diesel</span>
+                        </div>
+                        <div class="car-price">
+                            <span class="price">€60</span> / giorno
+                        </div>
+                        <a href="dettaglio-auto.html?id=3" class="btn btn-primary">Prenota Ora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AutoRent</h3>
+                    <p>Il miglior servizio di noleggio auto in Italia. Qualità, convenienza e assistenza garantita.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Link Utili</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="catalogo.html">Catalogo Auto</a></li>
+                        <li><a href="offerte.html">Offerte</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="termini.html">Termini e Condizioni</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contatti</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Via Roma 123, 00100 Roma</p>
+                    <p><i class="fas fa-phone"></i> +39 06 1234567</p>
+                    <p><i class="fas fa-envelope"></i> info@autorent.it</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Iscriviti per ricevere offerte esclusive</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="La tua email">
+                        <button type="submit" class="btn btn-primary">Iscriviti</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 AutoRent. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="dettaglio-auto.js"></script>
+</body>
+</html>
