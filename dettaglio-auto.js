@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Validazione form di prenotazione
     initializeFormValidation();
     
-    // Caricamento dati auto da URL
-    loadCarDataFromUrl();
+    // Caricamento dati attrezzatura da URL
+    loadEquipmentDataFromUrl();
 });
 
 /**
@@ -45,7 +45,7 @@ function initializeGallery() {
  * Inizializza i date picker con validazione
  */
 function initializeDatePickers() {
-    const pickupDateInput = document.getElementById('pickup-date');
+    const deliveryDateInput = document.getElementById('pickup-date');
     const returnDateInput = document.getElementById('return-date');
     
     // Imposta la data minima a oggi

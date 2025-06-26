@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dettaglio Attrezzatura - CateringRent</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dettaglio-auto.css"><!-- Nota: mantenuto il riferimento al CSS originale per evitare problemi di stile -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>CateringRent</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalogo.html" class="active">Catalogo Attrezzature</a></li>
+                    <li><a href="offerte.html">Offerte</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="login.html" class="btn btn-outline">Accedi</a>
+                <a href="registrazione.html" class="btn btn-primary">Registrati</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1 id="car-title">Set Chafing Dish</h1>
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a> / <a href="catalogo.html">Catalogo Attrezzature</a> / <span id="car-breadcrumb">Set Chafing Dish</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="car-detail">
+        <div class="container">
+            <div class="car-detail-layout">
+                <div class="car-gallery">
+                    <div class="main-image">
+                        <img id="main-car-image" src="images/car4.jpg" alt="Set Chafing Dish">
+                    </div>
+                    <div class="thumbnail-gallery">
+                        <div class="thumbnail active" data-image="images/car4.jpg">
+                            <img src="images/car4.jpg" alt="Set Chafing Dish - Vista frontale">
+                        </div>
+                        <div class="thumbnail" data-image="images/car4-interior.jpg">
+                            <img src="images/car4-interior.jpg" alt="Set Chafing Dish - Dettaglio">
+                        </div>
+                        <div class="thumbnail" data-image="images/car4-rear.jpg">
+                            <img src="images/car4-rear.jpg" alt="Set Chafing Dish - Accessori">
+                        </div>
+                        <div class="thumbnail" data-image="images/car4-side.jpg">
+                            <img src="images/car4-side.jpg" alt="Set Chafing Dish - In uso">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="car-info">
+                    <div class="car-header">
+                        <div class="car-title">
+                            <h2>Set Chafing Dish</h2>
+                            <div class="car-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="rating-count">(32 recensioni)</span>
+                            </div>
+                        </div>
+                        <div class="car-price">
+                            <div class="price-tag">
+                                <span class="price">€50</span> / giorno
+                            </div>
+                            <div class="total-price">
+                                €350 per 7 giorni
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="car-features-list">
+                        <div class="feature">
+                            <i class="fas fa-utensils"></i>
+                            <div class="feature-info">
+                                <h4>Marca e Modello</h4>
+                                <p>Hendi Professional</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-calendar-alt"></i>
+                            <div class="feature-info">
+                                <h4>Anno</h4>
+                                <p>2023</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-users"></i>
+                            <div class="feature-info">
+                                <h4>Capacità</h4>
+                                <p>Fino a 50 persone</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-box"></i>
+                            <div class="feature-info">
+                                <h4>Contenuto</h4>
+                                <p>4 vaschette con coperchio</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-fire"></i>
+                            <div class="feature-info">
+                                <h4>Alimentazione</h4>
+                                <p>Gel combustibile</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-cube"></i>
+                            <div class="feature-info">
+                                <h4>Materiale</h4>
+                                <p>Acciaio Inox</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-temperature-high"></i>
+                            <div class="feature-info">
+                                <h4>Temperatura</h4>
+                                <p>Fino a 80°C</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-tint"></i>
+                            <div class="feature-info">
+                                <h4>Lavabile</h4>
+                                <p>Sì, lavastoviglie</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="car-description">
+                        <h3>Descrizione</h3>
+                        <p>Il Set Chafing Dish Hendi Professional è la soluzione ideale per servire piatti caldi durante eventi, buffet e catering. Realizzato in acciaio inox di alta qualità, garantisce durata e un'estetica elegante per ogni occasione.</p>
+                        <p>Questo set completo include 4 vaschette con coperchio, supporti e bruciatori a gel, permettendo di mantenere i cibi alla temperatura ideale per diverse ore. Facile da montare, utilizzare e pulire, è la scelta perfetta per professionisti e privati.</p>
+                    </div>
+                    
+                    <div class="car-amenities">
+                        <h3>Dotazioni</h3>
+                        <ul class="amenities-list">
+                            <li><i class="fas fa-check"></i> 4 vaschette in acciaio inox</li>
+                            <li><i class="fas fa-check"></i> 4 coperchi con apertura regolabile</li>
+                            <li><i class="fas fa-check"></i> 4 supporti per vaschette</li>
+                            <li><i class="fas fa-check"></i> 8 bruciatori a gel</li>
+                            <li><i class="fas fa-check"></i> Vassoi raccogligocce</li>
+                            <li><i class="fas fa-check"></i> Maniglie termoisolanti</li>
+                            <li><i class="fas fa-check"></i> Indicatori di livello acqua</li>
+                            <li><i class="fas fa-check"></i> Struttura pieghevole salvaspazio</li>
+                            <li><i class="fas fa-check"></i> Piedini antiscivolo</li>
+                            <li><i class="fas fa-check"></i> Istruzioni di montaggio</li>
+                            <li><i class="fas fa-check"></i> Certificazione per uso alimentare</li>
+                            <li><i class="fas fa-check"></i> Custodia per trasporto</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-form">
+                <h2>Prenota Ora</h2>
+                <form id="booking-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="pickup-location">Località di consegna</label>
+                            <select id="pickup-location" required>
+                                <option value="">Seleziona località</option>
+                                <option value="roma">Roma</option>
+                                <option value="milano">Milano</option>
+                                <option value="napoli">Napoli</option>
+                                <option value="torino">Torino</option>
+                                <option value="firenze">Firenze</option>
+                                <option value="bologna">Bologna</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="event-type">Tipo di evento</label>
+                            <select id="event-type" required>
+                                <option value="">Seleziona tipo</option>
+                                <option value="matrimonio">Matrimonio</option>
+                                <option value="aziendale">Evento Aziendale</option>
+                                <option value="compleanno">Festa di Compleanno</option>
+                                <option value="conferenza">Conferenza</option>
+                                <option value="altro">Altro</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="pickup-date">Data di consegna</label>
+                            <input type="date" id="pickup-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pickup-time">Ora di consegna</label>
+                            <select id="pickup-time" required>
+                                <option value="">Seleziona ora</option>
+                                <option value="08:00">08:00</option>
+                                <option value="09:00">09:00</option>
+                                <option value="10:00">10:00</option>
+                                <option value="11:00">11:00</option>
+                                <option value="12:00">12:00</option>
+                                <option value="13:00">13:00</option>
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00</option>
+                                <option value="17:00">17:00</option>
+                                <option value="18:00">18:00</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="return-date">Data di ritiro</label>
+                            <input type="date" id="return-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="return-time">Ora di ritiro</label>
+                            <select id="return-time" required>
+                                <option value="">Seleziona ora</option>
+                                <option value="08:00">08:00</option>
+                                <option value="09:00">09:00</option>
+                                <option value="10:00">10:00</option>
+                                <option value="11:00">11:00</option>
+                                <option value="12:00">12:00</option>
+                                <option value="13:00">13:00</option>
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00</option>
+                                <option value="17:00">17:00</option>
+                                <option value="18:00">18:00</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="extras">
+                        <h3>Extra opzionali</h3>
+                        <div class="extras-list">
+                            <div class="extra-item">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="extra" value="gel-fuel">
+                                    <span class="checkbox-custom"></span>
+                                    <div class="extra-info">
+                                        <div class="extra-name">Gel combustibile extra</div>
+                                        <div class="extra-price">€10/giorno</div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="extra-item">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="extra" value="serving-utensils">
+                                    <span class="checkbox-custom"></span>
+                                    <div class="extra-info">
+                                        <div class="extra-name">Set utensili da servizio</div>
+                                        <div class="extra-price">€15/giorno</div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="extra-item">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="extra" value="delivery">
+                                    <span class="checkbox-custom"></span>
+                                    <div class="extra-info">
+                                        <div class="extra-name">Consegna e ritiro</div>
+                                        <div class="extra-price">€30/evento</div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="extra-item">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="extra" value="setup">
+                                    <span class="checkbox-custom"></span>
+                                    <div class="extra-info">
+                                        <div class="extra-name">Montaggio e smontaggio</div>
+                                        <div class="extra-price">€25/evento</div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="insurance">
+                        <h3>Assicurazione</h3>
+                        <div class="insurance-options">
+                            <div class="insurance-option">
+                                <label class="radio-label">
+                                    <input type="radio" name="insurance" value="basic" checked>
+                                    <span class="radio-custom"></span>
+                                    <div class="insurance-info">
+                                        <div class="insurance-name">Base</div>
+                                        <div class="insurance-description">Copertura di base con franchigia di €200</div>
+                                        <div class="insurance-price">Inclusa</div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="insurance-option">
+                                <label class="radio-label">
+                                    <input type="radio" name="insurance" value="medium">
+                                    <span class="radio-custom"></span>
+                                    <div class="insurance-info">
+                                        <div class="insurance-name">Media</div>
+                                        <div class="insurance-description">Copertura estesa con franchigia di €100</div>
+                                        <div class="insurance-price">€10/giorno</div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="insurance-option">
+                                <label class="radio-label">
+                                    <input type="radio" name="insurance" value="full">
+                                    <span class="radio-custom"></span>
+                                    <div class="insurance-info">
+                                        <div class="insurance-name">Completa</div>
+                                        <div class="insurance-description">Copertura totale senza franchigia</div>
+                                        <div class="insurance-price">€15/giorno</div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="booking-summary">
+                        <h3>Riepilogo prenotazione</h3>
+                        <div class="summary-items">
+                            <div class="summary-item">
+                                <span>Noleggio attrezzatura (7 giorni)</span>
+                                <span>€350.00</span>
+                            </div>
+                            <div class="summary-item" id="extras-cost">
+                                <span>Extra</span>
+                                <span>€0.00</span>
+                            </div>
+                            <div class="summary-item" id="insurance-cost">
+                                <span>Assicurazione</span>
+                                <span>€0.00</span>
+                            </div>
+                            <div class="summary-item total">
+                                <span>Totale</span>
+                                <span id="total-cost">€350.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary btn-large">Prenota Ora</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="similar-cars">
+        <div class="container">
+            <h2 class="section-title">Attrezzature Simili</h2>
+            <div class="cars-grid">
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="images/car6.jpg" alt="Set Scaldavivande">
+                        <span class="tag">Premium</span>
+                    </div>
+                    <div class="car-details">
+                        <h3>Set Scaldavivande</h3>
+                        <div class="car-features">
+                            <span><i class="fas fa-users"></i> Fino a 40 persone</span>
+                            <span><i class="fas fa-utensils"></i> 3 vaschette</span>
+                            <span><i class="fas fa-bolt"></i> Elettrico</span>
+                        </div>
+                        <div class="car-price">
+                            <span class="price">€45</span> / giorno
+                        </div>
+                        <a href="dettaglio-attrezzatura.html?id=6" class="btn btn-primary">Prenota Ora</a>
+                    </div>
+                </div>
+                
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="images/car12.jpg" alt="Set Porcellana Premium">
+                    </div>
+                    <div class="car-details">
+                        <h3>Set Porcellana Premium</h3>
+                        <div class="car-features">
+                            <span><i class="fas fa-users"></i> Fino a 30 persone</span>
+                            <span><i class="fas fa-utensils"></i> 90 pezzi</span>
+                            <span><i class="fas fa-star"></i> Lusso</span>
+                        </div>
+                        <div class="car-price">
+                            <span class="price">€40</span> / giorno
+                        </div>
+                        <a href="dettaglio-attrezzatura.html?id=12" class="btn btn-primary">Prenota Ora</a>
+                    </div>
+                </div>
+                
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="images/car3.jpg" alt="Set Completo Bar">
+                    </div>
+                    <div class="car-details">
+                        <h3>Set Completo Bar</h3>
+                        <div class="car-features">
+                            <span><i class="fas fa-glass-martini-alt"></i> 120 pezzi</span>
+                            <span><i class="fas fa-wine-bottle"></i> Accessori</span>
+                            <span><i class="fas fa-star"></i> Premium</span>
+                        </div>
+                        <div class="car-price">
+                            <span class="price">€60</span> / giorno
+                        </div>
+                        <a href="dettaglio-attrezzatura.html?id=3" class="btn btn-primary">Prenota Ora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CateringRent</h3>
+                    <p>Il miglior servizio di noleggio attrezzature per catering in Italia. Qualità, convenienza e assistenza garantita.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Link Utili</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="catalogo.html">Catalogo Attrezzature</a></li>
+                        <li><a href="offerte.html">Offerte</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="termini.html">Termini e Condizioni</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contatti</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Via Roma 123, 00100 Roma</p>
+                    <p><i class="fas fa-phone"></i> +39 06 1234567</p>
+                    <p><i class="fas fa-envelope"></i> info@cateringrent.it</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Iscriviti per ricevere offerte esclusive</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="La tua email">
+                        <button type="submit" class="btn btn-primary">Iscriviti</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 CateringRent. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="dettaglio-auto.js"></script>
+</body>
+</html>

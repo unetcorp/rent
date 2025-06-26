@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catalogo Auto - AutoRent</title>
+    <title>Catalogo Attrezzature - CateringRent</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="catalogo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -12,12 +12,12 @@
     <header>
         <div class="container">
             <div class="logo">
-                <h1>AutoRent</h1>
+                <h1>CateringRent</h1>
             </div>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="catalogo.html" class="active">Catalogo Auto</a></li>
+                    <li><a href="catalogo.html" class="active">Catalogo Attrezzature</a></li>
                     <li><a href="offerte.html">Offerte</a></li>
                     <li><a href="contatti.html">Contatti</a></li>
                 </ul>
@@ -31,40 +31,52 @@
 
     <section class="page-header">
         <div class="container">
-            <h1>Catalogo Auto</h1>
+            <h1>Catalogo Attrezzature</h1>
             <div class="breadcrumbs">
-                <a href="index.html">Home</a> / <span>Catalogo Auto</span>
+                <a href="index.html">Home</a> / <span>Catalogo Attrezzature</span>
             </div>
         </div>
     </section>
 
     <section class="search-filters">
         <div class="container">
-            <div class="search-box">
-                <form id="search-form">
-                    <div class="form-group">
-                        <label for="location">Località di ritiro</label>
-                        <select id="location">
-                            <option value="">Seleziona località</option>
-                            <option value="roma">Roma</option>
-                            <option value="milano">Milano</option>
-                            <option value="napoli">Napoli</option>
-                            <option value="torino">Torino</option>
-                            <option value="firenze">Firenze</option>
-                            <option value="bologna">Bologna</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="pickup-date">Data di ritiro</label>
-                        <input type="date" id="pickup-date">
-                    </div>
-                    <div class="form-group">
-                        <label for="return-date">Data di consegna</label>
-                        <input type="date" id="return-date">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Cerca Auto</button>
-                </form>
-            </div>
+            <form class="search-form">
+                <div class="form-group">
+                    <label for="location">Località di consegna</label>
+                    <select id="location" name="location">
+                        <option value="">Seleziona località</option>
+                        <option value="roma">Roma</option>
+                        <option value="milano">Milano</option>
+                        <option value="napoli">Napoli</option>
+                        <option value="torino">Torino</option>
+                        <option value="firenze">Firenze</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="event-type">Tipo di evento</label>
+                    <select id="event-type" name="event-type">
+                        <option value="">Seleziona tipo</option>
+                        <option value="matrimonio">Matrimonio</option>
+                        <option value="compleanno">Compleanno</option>
+                        <option value="aziendale">Evento Aziendale</option>
+                        <option value="conferenza">Conferenza</option>
+                        <option value="altro">Altro</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="pickup-date">Data di consegna</label>
+                    <input type="date" id="pickup-date" name="pickup-date">
+                </div>
+                
+                <div class="form-group">
+                    <label for="return-date">Data di ritiro</label>
+                    <input type="date" id="return-date" name="return-date">
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Cerca</button>
+            </form>
         </div>
     </section>
 
@@ -82,29 +94,29 @@
                         <div class="price-slider">
                             <div class="price-range">
                                 <span id="min-price">€0</span>
-                                <span id="max-price">€200</span>
+                                <span id="max-price">€1000</span>
                             </div>
-                            <input type="range" id="price-filter" min="0" max="200" step="5" value="200">
+                            <input type="range" id="price-filter" min="0" max="1000" step="10" value="1000">
                         </div>
                     </div>
                     
                     <div class="filter-group">
-                        <h4>Tipo di veicolo</h4>
+                        <h4>Tipo di attrezzatura</h4>
                         <div class="checkbox-group">
                             <label>
-                                <input type="checkbox" name="vehicle-type" value="economy"> Economy
+                                <input type="checkbox" name="equipment-type" value="buffet"> Buffet
                             </label>
                             <label>
-                                <input type="checkbox" name="vehicle-type" value="compact"> Compact
+                                <input type="checkbox" name="equipment-type" value="tavoli"> Tavoli e Sedie
                             </label>
                             <label>
-                                <input type="checkbox" name="vehicle-type" value="sedan"> Sedan
+                                <input type="checkbox" name="equipment-type" value="posate"> Posate e Piatti
                             </label>
                             <label>
-                                <input type="checkbox" name="vehicle-type" value="suv"> SUV
+                                <input type="checkbox" name="equipment-type" value="cucina"> Cucina
                             </label>
                             <label>
-                                <input type="checkbox" name="vehicle-type" value="luxury"> Luxury
+                                <input type="checkbox" name="equipment-type" value="refrigerazione"> Refrigerazione
                             </label>
                         </div>
                     </div>
@@ -113,55 +125,58 @@
                         <h4>Marche</h4>
                         <div class="checkbox-group">
                             <label>
-                                <input type="checkbox" name="brand" value="fiat"> Fiat
+                                <input type="checkbox" name="brand" value="sambonet"> Sambonet
                             </label>
                             <label>
-                                <input type="checkbox" name="brand" value="volkswagen"> Volkswagen
+                                <input type="checkbox" name="brand" value="bormioli"> Bormioli
                             </label>
                             <label>
-                                <input type="checkbox" name="brand" value="audi"> Audi
+                                <input type="checkbox" name="brand" value="electrolux"> Electrolux
                             </label>
                             <label>
-                                <input type="checkbox" name="brand" value="mercedes"> Mercedes
+                                <input type="checkbox" name="brand" value="rational"> Rational
                             </label>
                             <label>
-                                <input type="checkbox" name="brand" value="bmw"> BMW
+                                <input type="checkbox" name="brand" value="zanussi"> Zanussi
                             </label>
                             <label>
-                                <input type="checkbox" name="brand" value="toyota"> Toyota
+                                <input type="checkbox" name="brand" value="bartscher"> Bartscher
                             </label>
                             <label>
-                                <input type="checkbox" name="brand" value="renault"> Renault
-                            </label>
-                        </div>
-                    </div>
-                    
-                    <div class="filter-group">
-                        <h4>Carburante</h4>
-                        <div class="checkbox-group">
-                            <label>
-                                <input type="checkbox" name="fuel" value="petrol"> Benzina
-                            </label>
-                            <label>
-                                <input type="checkbox" name="fuel" value="diesel"> Diesel
-                            </label>
-                            <label>
-                                <input type="checkbox" name="fuel" value="hybrid"> Ibrida
-                            </label>
-                            <label>
-                                <input type="checkbox" name="fuel" value="electric"> Elettrica
+                                <input type="checkbox" name="brand" value="hendi"> Hendi
                             </label>
                         </div>
                     </div>
                     
                     <div class="filter-group">
-                        <h4>Trasmissione</h4>
+                        <h4>Materiale</h4>
                         <div class="checkbox-group">
                             <label>
-                                <input type="checkbox" name="transmission" value="manual"> Manuale
+                                <input type="checkbox" name="material" value="acciaio"> Acciaio Inox
                             </label>
                             <label>
-                                <input type="checkbox" name="transmission" value="automatic"> Automatica
+                                <input type="checkbox" name="material" value="porcellana"> Porcellana
+                            </label>
+                            <label>
+                                <input type="checkbox" name="material" value="vetro"> Vetro
+                            </label>
+                            <label>
+                                <input type="checkbox" name="material" value="legno"> Legno
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h4>Capacità</h4>
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" name="capacity" value="small"> Fino a 50 persone
+                            </label>
+                            <label>
+                                <input type="checkbox" name="capacity" value="medium"> 50-100 persone
+                            </label>
+                            <label>
+                                <input type="checkbox" name="capacity" value="large"> Oltre 100 persone
                             </label>
                         </div>
                     </div>
@@ -170,19 +185,19 @@
                         <h4>Caratteristiche</h4>
                         <div class="checkbox-group">
                             <label>
-                                <input type="checkbox" name="features" value="ac"> Aria condizionata
+                                <input type="checkbox" name="features" value="elettrico"> Elettrico
                             </label>
                             <label>
-                                <input type="checkbox" name="features" value="gps"> GPS/Navigatore
+                                <input type="checkbox" name="features" value="gas"> A Gas
                             </label>
                             <label>
-                                <input type="checkbox" name="features" value="bluetooth"> Bluetooth
+                                <input type="checkbox" name="features" value="portatile"> Portatile
                             </label>
                             <label>
-                                <input type="checkbox" name="features" value="usb"> Porte USB
+                                <input type="checkbox" name="features" value="professionale"> Professionale
                             </label>
                             <label>
-                                <input type="checkbox" name="features" value="child-seat"> Seggiolino bambini
+                                <input type="checkbox" name="features" value="lavabile"> Lavabile in Lavastoviglie
                             </label>
                         </div>
                     </div>
@@ -191,7 +206,7 @@
                 <div class="catalog-main">
                     <div class="catalog-header">
                         <div class="results-count">
-                            <span id="results-number">12</span> auto trovate
+                            <span id="results-number">12</span> attrezzature trovate
                         </div>
                         <div class="sort-options">
                             <label for="sort-by">Ordina per:</label>
@@ -210,286 +225,286 @@
                     </div>
                     
                     <div class="cars-grid" id="cars-container">
-                        <!-- Auto 1 -->
-                        <div class="car-card" data-price="35" data-brand="fiat" data-type="economy" data-fuel="petrol" data-transmission="manual">
+                        <!-- Attrezzatura 1 -->
+                        <div class="car-card" data-price="50" data-brand="sambonet" data-type="buffet" data-material="acciaio" data-capacity="medium">
                             <div class="car-image">
-                                <img src="images/car1.jpg" alt="Fiat 500">
+                                <img src="images/car1.jpg" alt="Set Chafing Dish">
                                 <span class="tag">Popolare</span>
                             </div>
                             <div class="car-details">
-                                <h3>Fiat 500</h3>
+                                <h3>Set Chafing Dish</h3>
                                 <div class="car-features">
-                                    <span><i class="fas fa-user"></i> 4 posti</span>
-                                    <span><i class="fas fa-suitcase"></i> 2 valigie</span>
-                                    <span><i class="fas fa-gas-pump"></i> Benzina</span>
+                                    <span><i class="fas fa-users"></i> Fino a 100 persone</span>
+                                    <span><i class="fas fa-utensils"></i> 5 pezzi</span>
+                                    <span><i class="fas fa-cube"></i> Acciaio Inox</span>
                                 </div>
                                 <div class="car-specs">
-                                    <span><i class="fas fa-cog"></i> Manuale</span>
-                                    <span><i class="fas fa-snowflake"></i> A/C</span>
+                                    <span><i class="fas fa-fire"></i> A Gas</span>
+                                    <span><i class="fas fa-check"></i> Professionale</span>
                                 </div>
                                 <div class="car-price">
-                                    <span class="price">€35</span> / giorno
+                                    <span class="price">€50</span> / giorno
                                 </div>
                                 <a href="dettaglio-auto.html?id=1" class="btn btn-primary">Prenota Ora</a>
                             </div>
                         </div>
                         
-                        <!-- Auto 2 -->
-                        <div class="car-card" data-price="45" data-brand="volkswagen" data-type="compact" data-fuel="diesel" data-transmission="manual">
+                        <!-- Attrezzatura 2 -->
+                        <div class="car-card" data-price="120" data-brand="hendi" data-type="tavoli" data-material="legno" data-capacity="large">
                             <div class="car-image">
-                                <img src="images/car2.jpg" alt="Volkswagen Golf">
+                                <img src="images/car2.jpg" alt="Set Tavoli e Sedie">
                                 <span class="tag">Consigliata</span>
                             </div>
                             <div class="car-details">
-                                <h3>Volkswagen Golf</h3>
+                                <h3>Set Tavoli e Sedie</h3>
                                 <div class="car-features">
-                                    <span><i class="fas fa-user"></i> 5 posti</span>
-                                    <span><i class="fas fa-suitcase"></i> 3 valigie</span>
-                                    <span><i class="fas fa-gas-pump"></i> Diesel</span>
+                                    <span><i class="fas fa-users"></i> Fino a 150 persone</span>
+                                    <span><i class="fas fa-chair"></i> 15 tavoli, 150 sedie</span>
+                                    <span><i class="fas fa-cube"></i> Legno</span>
                                 </div>
                                 <div class="car-specs">
-                                    <span><i class="fas fa-cog"></i> Manuale</span>
-                                    <span><i class="fas fa-snowflake"></i> A/C</span>
-                                </div>
-                                <div class="car-price">
-                                    <span class="price">€45</span> / giorno
-                                </div>
-                                <a href="dettaglio-auto.html?id=2" class="btn btn-primary">Prenota Ora</a>
-                            </div>
-                        </div>
-                        
-                        <!-- Auto 3 -->
-                        <div class="car-card" data-price="60" data-brand="audi" data-type="sedan" data-fuel="diesel" data-transmission="automatic">
-                            <div class="car-image">
-                                <img src="images/car3.jpg" alt="Audi A3">
-                            </div>
-                            <div class="car-details">
-                                <h3>Audi A3</h3>
-                                <div class="car-features">
-                                    <span><i class="fas fa-user"></i> 5 posti</span>
-                                    <span><i class="fas fa-suitcase"></i> 3 valigie</span>
-                                    <span><i class="fas fa-gas-pump"></i> Diesel</span>
-                                </div>
-                                <div class="car-specs">
-                                    <span><i class="fas fa-cog"></i> Automatica</span>
-                                    <span><i class="fas fa-snowflake"></i> A/C</span>
-                                </div>
-                                <div class="car-price">
-                                    <span class="price">€60</span> / giorno
-                                </div>
-                                <a href="dettaglio-auto.html?id=3" class="btn btn-primary">Prenota Ora</a>
-                            </div>
-                        </div>
-                        
-                        <!-- Auto 4 -->
-                        <div class="car-card" data-price="80" data-brand="mercedes" data-type="sedan" data-fuel="diesel" data-transmission="automatic">
-                            <div class="car-image">
-                                <img src="images/car4.jpg" alt="Mercedes Classe C">
-                                <span class="tag">Premium</span>
-                            </div>
-                            <div class="car-details">
-                                <h3>Mercedes Classe C</h3>
-                                <div class="car-features">
-                                    <span><i class="fas fa-user"></i> 5 posti</span>
-                                    <span><i class="fas fa-suitcase"></i> 4 valigie</span>
-                                    <span><i class="fas fa-gas-pump"></i> Diesel</span>
-                                </div>
-                                <div class="car-specs">
-                                    <span><i class="fas fa-cog"></i> Automatica</span>
-                                    <span><i class="fas fa-snowflake"></i> A/C</span>
-                                </div>
-                                <div class="car-price">
-                                    <span class="price">€80</span> / giorno
-                                </div>
-                                <a href="dettaglio-auto.html?id=4" class="btn btn-primary">Prenota Ora</a>
-                            </div>
-                        </div>
-                        
-                        <!-- Auto 5 -->
-                        <div class="car-card" data-price="55" data-brand="toyota" data-type="compact" data-fuel="hybrid" data-transmission="automatic">
-                            <div class="car-image">
-                                <img src="images/car5.jpg" alt="Toyota Corolla Hybrid">
-                                <span class="tag">Eco</span>
-                            </div>
-                            <div class="car-details">
-                                <h3>Toyota Corolla Hybrid</h3>
-                                <div class="car-features">
-                                    <span><i class="fas fa-user"></i> 5 posti</span>
-                                    <span><i class="fas fa-suitcase"></i> 3 valigie</span>
-                                    <span><i class="fas fa-gas-pump"></i> Ibrida</span>
-                                </div>
-                                <div class="car-specs">
-                                    <span><i class="fas fa-cog"></i> Automatica</span>
-                                    <span><i class="fas fa-snowflake"></i> A/C</span>
-                                </div>
-                                <div class="car-price">
-                                    <span class="price">€55</span> / giorno
-                                </div>
-                                <a href="dettaglio-auto.html?id=5" class="btn btn-primary">Prenota Ora</a>
-                            </div>
-                        </div>
-                        
-                        <!-- Auto 6 -->
-                        <div class="car-card" data-price="120" data-brand="bmw" data-type="luxury" data-fuel="petrol" data-transmission="automatic">
-                            <div class="car-image">
-                                <img src="images/car6.jpg" alt="BMW Serie 5">
-                                <span class="tag">Premium</span>
-                            </div>
-                            <div class="car-details">
-                                <h3>BMW Serie 5</h3>
-                                <div class="car-features">
-                                    <span><i class="fas fa-user"></i> 5 posti</span>
-                                    <span><i class="fas fa-suitcase"></i> 4 valigie</span>
-                                    <span><i class="fas fa-gas-pump"></i> Benzina</span>
-                                </div>
-                                <div class="car-specs">
-                                    <span><i class="fas fa-cog"></i> Automatica</span>
-                                    <span><i class="fas fa-snowflake"></i> A/C</span>
+                                    <span><i class="fas fa-box"></i> Pieghevoli</span>
+                                    <span><i class="fas fa-truck"></i> Consegna inclusa</span>
                                 </div>
                                 <div class="car-price">
                                     <span class="price">€120</span> / giorno
                                 </div>
-                                <a href="dettaglio-auto.html?id=6" class="btn btn-primary">Prenota Ora</a>
+                                <a href="dettaglio-attrezzatura.html?id=2" class="btn btn-primary">Prenota Ora</a>
                             </div>
                         </div>
                         
-                        <!-- Auto 7 -->
-                        <div class="car-card" data-price="40" data-brand="renault" data-type="economy" data-fuel="petrol" data-transmission="manual">
+                        <!-- Attrezzatura 3 -->
+                        <div class="car-card" data-price="80" data-brand="bormioli" data-type="posate" data-material="porcellana" data-capacity="medium">
                             <div class="car-image">
-                                <img src="images/car7.jpg" alt="Renault Clio">
+                                <img src="images/car3.jpg" alt="Set Posate e Piatti">
                             </div>
                             <div class="car-details">
-                                <h3>Renault Clio</h3>
+                                <h3>Set Posate e Piatti</h3>
                                 <div class="car-features">
-                                    <span><i class="fas fa-user"></i> 5 posti</span>
-                                    <span><i class="fas fa-suitcase"></i> 2 valigie</span>
-                                    <span><i class="fas fa-gas-pump"></i> Benzina</span>
+                                    <span><i class="fas fa-users"></i> Fino a 100 persone</span>
+                                    <span><i class="fas fa-utensils"></i> Servizio completo</span>
+                                    <span><i class="fas fa-cube"></i> Porcellana/Acciaio</span>
                                 </div>
                                 <div class="car-specs">
-                                    <span><i class="fas fa-cog"></i> Manuale</span>
-                                    <span><i class="fas fa-snowflake"></i> A/C</span>
+                                    <span><i class="fas fa-check"></i> Professionale</span>
+                                    <span><i class="fas fa-tint"></i> Lavabile</span>
                                 </div>
                                 <div class="car-price">
-                                    <span class="price">€40</span> / giorno
+                                    <span class="price">€80</span> / giorno
                                 </div>
-                                <a href="dettaglio-auto.html?id=7" class="btn btn-primary">Prenota Ora</a>
+                                <a href="dettaglio-attrezzatura.html?id=3" class="btn btn-primary">Prenota Ora</a>
                             </div>
                         </div>
                         
-                        <!-- Auto 8 -->
-                        <div class="car-card" data-price="90" data-brand="audi" data-type="suv" data-fuel="diesel" data-transmission="automatic">
+                        <!-- Attrezzatura 4 -->
+                        <div class="car-card" data-price="200" data-brand="rational" data-type="cucina" data-material="acciaio" data-capacity="large">
                             <div class="car-image">
-                                <img src="images/car8.jpg" alt="Audi Q5">
+                                <img src="images/car4.jpg" alt="Cucina Professionale Mobile">
+                                <span class="tag">Premium</span>
                             </div>
                             <div class="car-details">
-                                <h3>Audi Q5</h3>
+                                <h3>Cucina Professionale Mobile</h3>
                                 <div class="car-features">
-                                    <span><i class="fas fa-user"></i> 5 posti</span>
-                                    <span><i class="fas fa-suitcase"></i> 5 valigie</span>
-                                    <span><i class="fas fa-gas-pump"></i> Diesel</span>
+                                    <span><i class="fas fa-users"></i> Fino a 200 persone</span>
+                                    <span><i class="fas fa-fire-alt"></i> 6 fuochi</span>
+                                    <span><i class="fas fa-cube"></i> Acciaio Inox</span>
                                 </div>
                                 <div class="car-specs">
-                                    <span><i class="fas fa-cog"></i> Automatica</span>
-                                    <span><i class="fas fa-snowflake"></i> A/C</span>
+                                    <span><i class="fas fa-bolt"></i> Elettrico/Gas</span>
+                                    <span><i class="fas fa-check"></i> Professionale</span>
+                                </div>
+                                <div class="car-price">
+                                    <span class="price">€200</span> / giorno
+                                </div>
+                                <a href="dettaglio-attrezzatura.html?id=4" class="btn btn-primary">Prenota Ora</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Attrezzatura 5 -->
+                        <div class="car-card" data-price="90" data-brand="electrolux" data-type="refrigerazione" data-material="acciaio" data-capacity="medium">
+                            <div class="car-image">
+                                <img src="images/car5.jpg" alt="Frigoriferi Professionali">
+                                <span class="tag">Eco</span>
+                            </div>
+                            <div class="car-details">
+                                <h3>Frigoriferi Professionali</h3>
+                                <div class="car-features">
+                                    <span><i class="fas fa-temperature-low"></i> -5°C a +10°C</span>
+                                    <span><i class="fas fa-box"></i> 500 litri</span>
+                                    <span><i class="fas fa-cube"></i> Acciaio Inox</span>
+                                </div>
+                                <div class="car-specs">
+                                    <span><i class="fas fa-bolt"></i> Elettrico</span>
+                                    <span><i class="fas fa-truck"></i> Consegna inclusa</span>
                                 </div>
                                 <div class="car-price">
                                     <span class="price">€90</span> / giorno
                                 </div>
-                                <a href="dettaglio-auto.html?id=8" class="btn btn-primary">Prenota Ora</a>
+                                <a href="dettaglio-attrezzatura.html?id=5" class="btn btn-primary">Prenota Ora</a>
                             </div>
                         </div>
                         
-                        <!-- Auto 9 -->
-                        <div class="car-card" data-price="65" data-brand="volkswagen" data-type="suv" data-fuel="diesel" data-transmission="automatic">
+                        <!-- Attrezzatura 6 -->
+                        <div class="car-card" data-price="150" data-brand="bartscher" data-type="buffet" data-material="acciaio" data-capacity="large">
                             <div class="car-image">
-                                <img src="images/car9.jpg" alt="Volkswagen Tiguan">
-                            </div>
-                            <div class="car-details">
-                                <h3>Volkswagen Tiguan</h3>
-                                <div class="car-features">
-                                    <span><i class="fas fa-user"></i> 5 posti</span>
-                                    <span><i class="fas fa-suitcase"></i> 4 valigie</span>
-                                    <span><i class="fas fa-gas-pump"></i> Diesel</span>
-                                </div>
-                                <div class="car-specs">
-                                    <span><i class="fas fa-cog"></i> Automatica</span>
-                                    <span><i class="fas fa-snowflake"></i> A/C</span>
-                                </div>
-                                <div class="car-price">
-                                    <span class="price">€65</span> / giorno
-                                </div>
-                                <a href="dettaglio-auto.html?id=9" class="btn btn-primary">Prenota Ora</a>
-                            </div>
-                        </div>
-                        
-                        <!-- Auto 10 -->
-                        <div class="car-card" data-price="150" data-brand="mercedes" data-type="luxury" data-fuel="petrol" data-transmission="automatic">
-                            <div class="car-image">
-                                <img src="images/car10.jpg" alt="Mercedes Classe E Cabrio">
+                                <img src="images/car6.jpg" alt="Set Completo Buffet">
                                 <span class="tag">Premium</span>
                             </div>
                             <div class="car-details">
-                                <h3>Mercedes Classe E Cabrio</h3>
+                                <h3>Set Completo Buffet</h3>
                                 <div class="car-features">
-                                    <span><i class="fas fa-user"></i> 4 posti</span>
-                                    <span><i class="fas fa-suitcase"></i> 2 valigie</span>
-                                    <span><i class="fas fa-gas-pump"></i> Benzina</span>
+                                    <span><i class="fas fa-users"></i> Fino a 200 persone</span>
+                                    <span><i class="fas fa-utensils"></i> 20+ elementi</span>
+                                    <span><i class="fas fa-cube"></i> Acciaio Inox</span>
                                 </div>
                                 <div class="car-specs">
-                                    <span><i class="fas fa-cog"></i> Automatica</span>
-                                    <span><i class="fas fa-snowflake"></i> A/C</span>
+                                    <span><i class="fas fa-fire"></i> A Gas</span>
+                                    <span><i class="fas fa-truck"></i> Consegna inclusa</span>
                                 </div>
                                 <div class="car-price">
                                     <span class="price">€150</span> / giorno
                                 </div>
-                                <a href="dettaglio-auto.html?id=10" class="btn btn-primary">Prenota Ora</a>
+                                <a href="dettaglio-attrezzatura.html?id=6" class="btn btn-primary">Prenota Ora</a>
                             </div>
                         </div>
                         
-                        <!-- Auto 11 -->
-                        <div class="car-card" data-price="70" data-brand="toyota" data-type="suv" data-fuel="hybrid" data-transmission="automatic">
+                        <!-- Attrezzatura 7 -->
+                        <div class="car-card" data-price="60" data-brand="bormioli" data-type="posate" data-material="vetro" data-capacity="small">
                             <div class="car-image">
-                                <img src="images/car11.jpg" alt="Toyota RAV4 Hybrid">
-                                <span class="tag">Eco</span>
+                                <img src="images/car7.jpg" alt="Set Bicchieri e Calici">
                             </div>
                             <div class="car-details">
-                                <h3>Toyota RAV4 Hybrid</h3>
+                                <h3>Set Bicchieri e Calici</h3>
                                 <div class="car-features">
-                                    <span><i class="fas fa-user"></i> 5 posti</span>
-                                    <span><i class="fas fa-suitcase"></i> 4 valigie</span>
-                                    <span><i class="fas fa-gas-pump"></i> Ibrida</span>
+                                    <span><i class="fas fa-users"></i> Fino a 50 persone</span>
+                                    <span><i class="fas fa-wine-glass-alt"></i> 4 tipi di bicchieri</span>
+                                    <span><i class="fas fa-cube"></i> Vetro</span>
                                 </div>
                                 <div class="car-specs">
-                                    <span><i class="fas fa-cog"></i> Automatica</span>
-                                    <span><i class="fas fa-snowflake"></i> A/C</span>
+                                    <span><i class="fas fa-check"></i> Professionale</span>
+                                    <span><i class="fas fa-tint"></i> Lavabile</span>
+                                </div>
+                                <div class="car-price">
+                                    <span class="price">€60</span> / giorno
+                                </div>
+                                <a href="dettaglio-attrezzatura.html?id=7" class="btn btn-primary">Prenota Ora</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Attrezzatura 8 -->
+                        <div class="car-card" data-price="180" data-brand="zanussi" data-type="cucina" data-material="acciaio" data-capacity="medium">
+                            <div class="car-image">
+                                <img src="images/car8.jpg" alt="Forno Professionale">
+                            </div>
+                            <div class="car-details">
+                                <h3>Forno Professionale</h3>
+                                <div class="car-features">
+                                    <span><i class="fas fa-users"></i> Fino a 100 persone</span>
+                                    <span><i class="fas fa-temperature-high"></i> Fino a 300°C</span>
+                                    <span><i class="fas fa-cube"></i> Acciaio Inox</span>
+                                </div>
+                                <div class="car-specs">
+                                    <span><i class="fas fa-bolt"></i> Elettrico</span>
+                                    <span><i class="fas fa-check"></i> Professionale</span>
+                                </div>
+                                <div class="car-price">
+                                    <span class="price">€180</span> / giorno
+                                </div>
+                                <a href="dettaglio-attrezzatura.html?id=8" class="btn btn-primary">Prenota Ora</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Attrezzatura 9 -->
+                        <div class="car-card" data-price="70" data-brand="electrolux" data-type="buffet" data-material="acciaio" data-capacity="small">
+                            <div class="car-image">
+                                <img src="images/car9.jpg" alt="Set Scaldavivande">
+                            </div>
+                            <div class="car-details">
+                                <h3>Set Scaldavivande</h3>
+                                <div class="car-features">
+                                    <span><i class="fas fa-users"></i> Fino a 50 persone</span>
+                                    <span><i class="fas fa-utensils"></i> 3 pezzi</span>
+                                    <span><i class="fas fa-cube"></i> Acciaio Inox</span>
+                                </div>
+                                <div class="car-specs">
+                                    <span><i class="fas fa-bolt"></i> Elettrico</span>
+                                    <span><i class="fas fa-tint"></i> Lavabile</span>
                                 </div>
                                 <div class="car-price">
                                     <span class="price">€70</span> / giorno
                                 </div>
-                                <a href="dettaglio-auto.html?id=11" class="btn btn-primary">Prenota Ora</a>
+                                <a href="dettaglio-attrezzatura.html?id=9" class="btn btn-primary">Prenota Ora</a>
                             </div>
                         </div>
                         
-                        <!-- Auto 12 -->
-                        <div class="car-card" data-price="100" data-brand="bmw" data-type="sedan" data-fuel="diesel" data-transmission="automatic">
+                        <!-- Attrezzatura 10 -->
+                        <div class="car-card" data-price="250" data-brand="rational" data-type="cucina" data-material="acciaio" data-capacity="large">
                             <div class="car-image">
-                                <img src="images/car12.jpg" alt="BMW Serie 3">
+                                <img src="images/car10.jpg" alt="Cucina Completa Professionale">
+                                <span class="tag">Premium</span>
                             </div>
                             <div class="car-details">
-                                <h3>BMW Serie 3</h3>
+                                <h3>Cucina Completa Professionale</h3>
                                 <div class="car-features">
-                                    <span><i class="fas fa-user"></i> 5 posti</span>
-                                    <span><i class="fas fa-suitcase"></i> 4 valigie</span>
-                                    <span><i class="fas fa-gas-pump"></i> Diesel</span>
+                                    <span><i class="fas fa-users"></i> Oltre 200 persone</span>
+                                    <span><i class="fas fa-utensils"></i> Sistema completo</span>
+                                    <span><i class="fas fa-cube"></i> Acciaio Inox</span>
                                 </div>
                                 <div class="car-specs">
-                                    <span><i class="fas fa-cog"></i> Automatica</span>
-                                    <span><i class="fas fa-snowflake"></i> A/C</span>
+                                    <span><i class="fas fa-fire"></i> Gas</span>
+                                    <span><i class="fas fa-check"></i> Professionale</span>
                                 </div>
                                 <div class="car-price">
-                                    <span class="price">€100</span> / giorno
+                                    <span class="price">€250</span> / giorno
                                 </div>
-                                <a href="dettaglio-auto.html?id=12" class="btn btn-primary">Prenota Ora</a>
+                                <a href="dettaglio-attrezzatura.html?id=10" class="btn btn-primary">Prenota Ora</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Attrezzatura 11 -->
+                        <div class="car-card" data-price="90" data-brand="sambonet" data-type="servizio" data-material="porcellana" data-capacity="medium">
+                            <div class="car-image">
+                                <img src="images/car11.jpg" alt="Set Porcellana Premium">
+                                <span class="tag">Eco</span>
+                            </div>
+                            <div class="car-details">
+                                <h3>Set Porcellana Premium</h3>
+                                <div class="car-features">
+                                    <span><i class="fas fa-users"></i> Fino a 80 persone</span>
+                                    <span><i class="fas fa-utensils"></i> 240 pezzi</span>
+                                    <span><i class="fas fa-cube"></i> Porcellana</span>
+                                </div>
+                                <div class="car-specs">
+                                    <span><i class="fas fa-tint"></i> Lavabile</span>
+                                    <span><i class="fas fa-check"></i> Professionale</span>
+                                </div>
+                                <div class="car-price">
+                                    <span class="price">€90</span> / giorno
+                                </div>
+                                <a href="dettaglio-attrezzatura.html?id=11" class="btn btn-primary">Prenota Ora</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Attrezzatura 12 -->
+                        <div class="car-card" data-price="120" data-brand="bartscher" data-type="bar" data-material="acciaio" data-capacity="medium">
+                            <div class="car-image">
+                                <img src="images/car12.jpg" alt="Set Completo Bar">
+                            </div>
+                            <div class="car-details">
+                                <h3>Set Completo Bar</h3>
+                                <div class="car-features">
+                                    <span><i class="fas fa-users"></i> Fino a 100 persone</span>
+                                    <span><i class="fas fa-wine-glass-alt"></i> Sistema completo</span>
+                                    <span><i class="fas fa-cube"></i> Acciaio/Vetro</span>
+                                </div>
+                                <div class="car-specs">
+                                    <span><i class="fas fa-bolt"></i> Elettrico</span>
+                                    <span><i class="fas fa-tint"></i> Lavabile</span>
+                                </div>
+                                <div class="car-price">
+                                    <span class="price">€120</span> / giorno
+                                </div>
+                                <a href="dettaglio-attrezzatura.html?id=12" class="btn btn-primary">Prenota Ora</a>
                             </div>
                         </div>
                     </div>
@@ -509,8 +524,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>AutoRent</h3>
-                    <p>Il miglior servizio di noleggio auto in Italia. Qualità, convenienza e assistenza garantita.</p>
+                    <h3>CateringRent</h3>
+                    <p>Il miglior servizio di noleggio attrezzature per catering in Italia. Qualità, convenienza e assistenza garantita.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -522,7 +537,7 @@
                     <h3>Link Utili</h3>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="catalogo.html">Catalogo Auto</a></li>
+                        <li><a href="catalogo.html">Catalogo Attrezzature</a></li>
                         <li><a href="offerte.html">Offerte</a></li>
                         <li><a href="faq.html">FAQ</a></li>
                         <li><a href="termini.html">Termini e Condizioni</a></li>
@@ -533,7 +548,7 @@
                     <h3>Contatti</h3>
                     <p><i class="fas fa-map-marker-alt"></i> Via Roma 123, 00100 Roma</p>
                     <p><i class="fas fa-phone"></i> +39 06 1234567</p>
-                    <p><i class="fas fa-envelope"></i> info@autorent.it</p>
+                    <p><i class="fas fa-envelope"></i> info@cateringrent.it</p>
                 </div>
                 <div class="footer-section">
                     <h3>Newsletter</h3>
@@ -545,7 +560,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 AutoRent. Tutti i diritti riservati.</p>
+                <p>&copy; 2023 CateringRent. Tutti i diritti riservati.</p>
             </div>
         </div>
     </footer>

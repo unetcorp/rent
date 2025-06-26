@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoRent - Noleggio Auto</title>
+    <title>CateringRent - Noleggio Attrezzature Catering</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -11,12 +11,12 @@
     <header>
         <div class="container">
             <div class="logo">
-                <a href="index.html">Auto<span>Rent</span></a>
+                <a href="index.html">Catering<span>Rent</span></a>
             </div>
             <nav>
                 <ul>
                     <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="catalogo.html">Catalogo Auto</a></li>
+                    <li><a href="catalogo.html">Catalogo Attrezzature</a></li>
                     <li><a href="offerte.html">Offerte</a></li>
                     <li><a href="contatti.html">Contatti</a></li>
                 </ul>
@@ -31,8 +31,8 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h2>Noleggia l'auto dei tuoi sogni</h2>
-                <p>Scegli tra centinaia di modelli disponibili e parti per la tua prossima avventura</p>
+                <h2>Noleggia attrezzature professionali per il tuo evento</h2>
+                <p>Scegli tra centinaia di prodotti disponibili per rendere perfetto il tuo servizio di catering</p>
                 <div class="search-box">
                     <form>
                         <div class="form-group">
@@ -52,7 +52,7 @@
                             <label for="return-date">Data di consegna</label>
                             <input type="date" id="return-date">
                         </div>
-                        <button type="submit" class="btn btn-primary">Cerca Auto</button>
+                        <button type="submit" class="btn btn-primary">Cerca Attrezzature</button>
                     </form>
                 </div>
             </div>
@@ -61,85 +61,85 @@
 
     <section class="featured-cars">
         <div class="container">
-            <h2 class="section-title">Auto in Evidenza</h2>
+            <h2 class="section-title">Attrezzature in Evidenza</h2>
             <div class="cars-grid">
                 <div class="car-card">
                     <div class="car-image">
-                        <img src="images/car1.jpg" alt="Fiat 500">
+                        <img src="images/car1.jpg" alt="Set Chafing Dish">
                         <span class="tag">Popolare</span>
                     </div>
                     <div class="car-details">
-                        <h3>Fiat 500</h3>
+                        <h3>Set Chafing Dish</h3>
                         <div class="car-features">
-                            <span><i class="fas fa-user"></i> 4 posti</span>
-                            <span><i class="fas fa-suitcase"></i> 2 valigie</span>
-                            <span><i class="fas fa-gas-pump"></i> Benzina</span>
+                            <span><i class="fas fa-utensils"></i> Buffet</span>
+                            <span><i class="fas fa-temperature-high"></i> Riscaldato</span>
+                            <span><i class="fas fa-box"></i> Set da 3</span>
                         </div>
                         <div class="car-price">
                             <span class="price">€35</span> / giorno
                         </div>
-                        <a href="dettaglio-auto.html?id=1" class="btn btn-primary">Prenota Ora</a>
+                        <a href="dettaglio-attrezzatura.html?id=1" class="btn btn-primary">Prenota Ora</a>
                     </div>
                 </div>
 
                 <div class="car-card">
                     <div class="car-image">
-                        <img src="images/car2.jpg" alt="Volkswagen Golf">
+                        <img src="images/car2.jpg" alt="Tavoli e Sedie">
                         <span class="tag">Consigliata</span>
                     </div>
                     <div class="car-details">
-                        <h3>Volkswagen Golf</h3>
+                        <h3>Set Tavoli e Sedie</h3>
                         <div class="car-features">
-                            <span><i class="fas fa-user"></i> 5 posti</span>
-                            <span><i class="fas fa-suitcase"></i> 3 valigie</span>
-                            <span><i class="fas fa-gas-pump"></i> Diesel</span>
+                            <span><i class="fas fa-chair"></i> 50 posti</span>
+                            <span><i class="fas fa-table"></i> 10 tavoli</span>
+                            <span><i class="fas fa-tshirt"></i> Tovaglie incluse</span>
                         </div>
                         <div class="car-price">
-                            <span class="price">€45</span> / giorno
+                            <span class="price">€120</span> / giorno
                         </div>
-                        <a href="dettaglio-auto.html?id=2" class="btn btn-primary">Prenota Ora</a>
+                        <a href="dettaglio-attrezzatura.html?id=2" class="btn btn-primary">Prenota Ora</a>
                     </div>
                 </div>
 
                 <div class="car-card">
                     <div class="car-image">
-                        <img src="images/car3.jpg" alt="Audi A3">
+                        <img src="images/car3.jpg" alt="Set Posate e Piatti">
                     </div>
                     <div class="car-details">
-                        <h3>Audi A3</h3>
+                        <h3>Set Posate e Piatti</h3>
                         <div class="car-features">
-                            <span><i class="fas fa-user"></i> 5 posti</span>
-                            <span><i class="fas fa-suitcase"></i> 3 valigie</span>
-                            <span><i class="fas fa-gas-pump"></i> Diesel</span>
-                        </div>
-                        <div class="car-price">
-                            <span class="price">€60</span> / giorno
-                        </div>
-                        <a href="dettaglio-auto.html?id=3" class="btn btn-primary">Prenota Ora</a>
-                    </div>
-                </div>
-
-                <div class="car-card">
-                    <div class="car-image">
-                        <img src="images/car4.jpg" alt="Mercedes Classe C">
-                        <span class="tag">Premium</span>
-                    </div>
-                    <div class="car-details">
-                        <h3>Mercedes Classe C</h3>
-                        <div class="car-features">
-                            <span><i class="fas fa-user"></i> 5 posti</span>
-                            <span><i class="fas fa-suitcase"></i> 4 valigie</span>
-                            <span><i class="fas fa-gas-pump"></i> Diesel</span>
+                            <span><i class="fas fa-utensil-spoon"></i> 100 coperti</span>
+                            <span><i class="fas fa-wine-glass"></i> Bicchieri inclusi</span>
+                            <span><i class="fas fa-star"></i> Alta qualità</span>
                         </div>
                         <div class="car-price">
                             <span class="price">€80</span> / giorno
                         </div>
-                        <a href="dettaglio-auto.html?id=4" class="btn btn-primary">Prenota Ora</a>
+                        <a href="dettaglio-attrezzatura.html?id=3" class="btn btn-primary">Prenota Ora</a>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="images/car4.jpg" alt="Attrezzatura Cucina Professionale">
+                        <span class="tag">Premium</span>
+                    </div>
+                    <div class="car-details">
+                        <h3>Cucina Professionale Mobile</h3>
+                        <div class="car-features">
+                            <span><i class="fas fa-fire"></i> 4 fornelli</span>
+                            <span><i class="fas fa-temperature-low"></i> Frigo incluso</span>
+                            <span><i class="fas fa-tools"></i> Completa</span>
+                        </div>
+                        <div class="car-price">
+                            <span class="price">€200</span> / giorno
+                        </div>
+                        <a href="dettaglio-attrezzatura.html?id=4" class="btn btn-primary">Prenota Ora</a>
                     </div>
                 </div>
             </div>
             <div class="view-all">
-                <a href="catalogo.html" class="btn btn-outline">Vedi tutte le auto</a>
+                <a href="catalogo.html" class="btn btn-outline">Vedi tutte le attrezzature</a>
             </div>
         </div>
     </section>
@@ -153,7 +153,7 @@
                         <i class="fas fa-search"></i>
                     </div>
                     <h3>1. Cerca</h3>
-                    <p>Cerca l'auto che preferisci tra i nostri numerosi modelli disponibili</p>
+                    <p>Cerca le attrezzature che ti servono tra i nostri numerosi prodotti disponibili</p>
                 </div>
                 <div class="step">
                     <div class="step-icon">
@@ -164,17 +164,17 @@
                 </div>
                 <div class="step">
                     <div class="step-icon">
-                        <i class="fas fa-car"></i>
+                        <i class="fas fa-truck"></i>
                     </div>
-                    <h3>3. Ritira</h3>
-                    <p>Ritira l'auto presso la nostra sede e inizia il tuo viaggio</p>
+                    <h3>3. Ricevi</h3>
+                    <p>Ricevi le attrezzature direttamente nel luogo del tuo evento o ritirala presso la nostra sede</p>
                 </div>
                 <div class="step">
                     <div class="step-icon">
                         <i class="fas fa-undo"></i>
                     </div>
                     <h3>4. Restituisci</h3>
-                    <p>Riporta l'auto alla fine del noleggio senza complicazioni</p>
+                    <p>Restituisci le attrezzature alla fine del noleggio senza complicazioni</p>
                 </div>
             </div>
         </div>
@@ -186,7 +186,7 @@
             <div class="testimonials-slider">
                 <div class="testimonial">
                     <div class="testimonial-content">
-                        <p>"Servizio eccellente! Auto pulita e in perfette condizioni. Prenotazione semplice e veloce. Consigliatissimo!"</p>
+                        <p>"Servizio eccellente! Attrezzature di alta qualità e in perfette condizioni. Prenotazione semplice e veloce. Consigliatissimo per ogni tipo di evento!"</p>
                     </div>
                     <div class="testimonial-author">
                         <img src="images/user1.jpg" alt="Marco Rossi">
@@ -205,7 +205,7 @@
 
                 <div class="testimonial">
                     <div class="testimonial-content">
-                        <p>"Prezzi competitivi e personale cordiale. Ho noleggiato una Golf per una settimana e mi sono trovato benissimo."</p>
+                        <p>"Prezzi competitivi e personale cordiale. Ho noleggiato l'attrezzatura completa per un matrimonio di 100 persone e tutto è stato perfetto. Il servizio di consegna è stato puntuale e professionale."</p>
                     </div>
                     <div class="testimonial-author">
                         <img src="images/user2.jpg" alt="Laura Bianchi">
@@ -228,8 +228,8 @@
     <section class="cta">
         <div class="container">
             <div class="cta-content">
-                <h2>Pronto a partire?</h2>
-                <p>Registrati ora e ricevi uno sconto del 10% sul tuo primo noleggio</p>
+                <h2>Pronto per il tuo evento?</h2>
+                <p>Registrati ora e ricevi uno sconto del 10% sul tuo primo noleggio di attrezzature</p>
                 <a href="registrazione.html" class="btn btn-primary">Registrati Ora</a>
             </div>
         </div>
@@ -239,8 +239,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>AutoRent</h3>
-                    <p>Il miglior servizio di noleggio auto in Italia. Qualità, convenienza e assistenza garantita.</p>
+                    <h3>CateringRent</h3>
+                    <p>Il miglior servizio di noleggio attrezzature per catering in Italia. Qualità, convenienza e assistenza garantita.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -252,7 +252,7 @@
                     <h3>Link Utili</h3>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="catalogo.html">Catalogo Auto</a></li>
+                        <li><a href="catalogo.html">Catalogo Attrezzature</a></li>
                         <li><a href="offerte.html">Offerte</a></li>
                         <li><a href="faq.html">FAQ</a></li>
                         <li><a href="termini.html">Termini e Condizioni</a></li>
@@ -263,7 +263,7 @@
                     <h3>Contatti</h3>
                     <p><i class="fas fa-map-marker-alt"></i> Via Roma 123, 00100 Roma</p>
                     <p><i class="fas fa-phone"></i> +39 06 1234567</p>
-                    <p><i class="fas fa-envelope"></i> info@autorent.it</p>
+                    <p><i class="fas fa-envelope"></i> info@cateringrent.it</p>
                 </div>
                 <div class="footer-section">
                     <h3>Newsletter</h3>
@@ -275,7 +275,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 AutoRent. Tutti i diritti riservati.</p>
+                <p>&copy; 2023 CateringRent. Tutti i diritti riservati.</p>
             </div>
         </div>
     </footer>
